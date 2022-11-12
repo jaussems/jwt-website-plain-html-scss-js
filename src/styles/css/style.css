@@ -1,7 +1,19 @@
-body {
-  background-color: var(#e90000);
-  color: black;
-  font-size: 36px;
+:root {
+  --color-primary: blue;
+  --color-secondary: yellow;
+  --green-500: #48bb78;
+}
+:root body {
+  background: var(--color-primary);
+  color: var(--color-secondary);
+}
+:root html[data-theme=dark] {
+  --color-primary: black,
+  --color-secondary: white, ;
+}
+:root html[data-theme=light] {
+  --color-primary: white,
+  --color-secondary: black, ;
 }
 
 .dark-mode {
