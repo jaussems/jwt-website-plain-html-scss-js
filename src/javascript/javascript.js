@@ -4,7 +4,6 @@ if (storedTheme)
     document.documentElement.setAttribute('data-theme', storedTheme)
 
 const darkModeToggle = () => {
-    let style = {};
     var currentTheme = document.documentElement.getAttribute("data-theme");
     var targetTheme = "light";
     

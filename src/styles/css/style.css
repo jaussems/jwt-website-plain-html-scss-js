@@ -2,11 +2,13 @@
   --background-color: rgb(214, 7, 7);
   --text-color: #121416d8;
   --link-color: #543fd7;
+  --transition-duration: .4s /* Declare transition duration */ ;
 }
 
 body {
   background: var(--background-color);
   color: var(--text-color);
+  transition: background var(--transition-duration) ease-in-out;
 }
 
 a {
@@ -16,6 +18,7 @@ a {
 a:hover {
   text-decoration: underline;
   filter: brightness(80%);
+  transition: var(--transition-duration);
 }
 
 html[data-theme=light] {
