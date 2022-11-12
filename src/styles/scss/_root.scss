@@ -1,38 +1,9 @@
 @import "variables";
 
-:root {
-   
-
-    $colours:(
-        "color-primary": $primary-color,
-        "color-secondary": $secondary-color,
-        "green-500": #48bb78,
-        
-
-      );
-
-
-    @each $key_name, $value in $colours {
-        --#{$key_name}: #{$value};
-      }
-
-      body {
-        background: var(--color-primary);
-        color: var(--color-secondary);
+    :root {
+        --background-color: rgb(214, 7, 7);
+        --text-color: #121416d8;
+        --link-color: #543fd7;
     }
-    html[data-theme="dark"] {
-        --color-primary: black,
-      --color-secondary: white,
-    }
-
-    html[data-theme="light"] {
-        --color-primary: white,
-      --color-secondary: black,
-    }
-
-    // body: {
-    //     background: var(--color-primary);
-    //     color: var(--color-secondary);
-    // }
+    
   
-  }
