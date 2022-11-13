@@ -58,13 +58,14 @@ html[data-theme='dark'] {
   background-color: var(--secondary-color);
   
   &__text {
-    width: 26rem;
+    width: 40rem;
   }
   
   &__image {
     &__img-1 {
       border-radius: 99px;
-      height: 40em;
+      height: 20rem;
+      vertical-align: bottom;
     }
 
   }
@@ -72,7 +73,9 @@ html[data-theme='dark'] {
 }
 
 p {
-  font-family: 'RobotoSlab Medium', sans-serif;
+  // font-family: 'RobotoSlab Medium', sans-serif;
+  font-family: 'Quicksand Medium', sans-serif;
+  
 }
 
 a,

@@ -85,15 +85,16 @@ html[data-theme=dark] {
   background-color: var(--secondary-color);
 }
 .intro__text {
-  width: 26rem;
+  width: 40rem;
 }
 .intro__image__img-1 {
   border-radius: 99px;
-  height: 40em;
+  height: 20rem;
+  vertical-align: bottom;
 }
 
 p {
-  font-family: "RobotoSlab Medium", sans-serif;
+  font-family: "Quicksand Medium", sans-serif;
 }
 
 a,
