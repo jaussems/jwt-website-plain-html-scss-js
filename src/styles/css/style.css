@@ -1,18 +1,57 @@
 :root {
   --background-color: rgb(214, 7, 7);
+  --secondary-color: darkblue;
   --text-color: #121416d8;
   --link-color: #543fd7;
-  --transition-duration: .4s /* Declare transition duration */ ;
+  --transition-duration: .3s ;
 }
 
+@font-face {
+  font-family: "RobotoSlab Light";
+  src: url("../../shared/fonts/Roboto_Slab/RobotoSlab-Light.ttf") format("truetype");
+  font-weight: 200;
+}
+@font-face {
+  font-family: "RobotoSlab Medium";
+  src: url("../../shared/fonts/Roboto_Slab/RobotoSlab-Light.ttf") format("truetype");
+  font-weight: 300;
+}
+@font-face {
+  font-family: "RobotoSlab Regular";
+  src: url("../../shared/fonts/Roboto_Slab/RobotoSlab-Light.ttf") format("truetype");
+  font-weight: 400;
+}
+@font-face {
+  font-family: "QuickSand Medium";
+  src: url("../../shared/fonts/Quick_Sand/Quicksand-Medium.ttf") format("truetype");
+  font-weight: 300;
+}
+@font-face {
+  font-family: "QuickSand Regular";
+  src: url("../../shared/fonts/Quick_Sand/Quicksand-Regular.ttf") format("truetype");
+  font-weight: 400;
+}
 body {
-  background: var(--background-color);
+  background-color: var(--background-color);
   color: var(--text-color);
   transition: background var(--transition-duration) ease-in-out;
 }
 
 a {
   color: var(--link-color);
+}
+
+button {
+  background: transparent;
+  border: none !important;
+  font-size: 0;
+}
+
+nav a {
+  text-decoration: none;
+  font-size: large;
+  justify-content: center;
+  margin: 0em 1em 1em 1em !important;
 }
 
 a:hover {
@@ -23,14 +62,43 @@ a:hover {
 
 html[data-theme=light] {
   --background-color: #fff;
+  --secondary-color: rgb(255, 255, 255);
   --text-color: #121416d8;
-  --link-color: #ee8524;
+  --link-color: #2f1f86;
 }
 
 html[data-theme=dark] {
   --background-color: #212a2e;
+  --secondary-color: rgb(37, 37, 46);
   --text-color: #F7F8F8;
   --link-color: #828fff;
+}
+
+.__icon {
+  height: 2.5rem;
+  width: 2.5rem;
+}
+
+.intro {
+  display: flex;
+  flex-direction: row;
+  background-color: var(--secondary-color);
+}
+.intro__text {
+  width: 26rem;
+}
+.intro__image__img-1 {
+  border-radius: 99px;
+  height: 40em;
+}
+
+p {
+  font-family: "RobotoSlab Medium", sans-serif;
+}
+
+a,
+h1 {
+  font-family: "Quicksand Regular", sans-serif;
 }
 
 /*# sourceMappingURL=style.css.map */

@@ -10,7 +10,7 @@ const darkModeToggle = () => {
     if (currentTheme === "light") {
         targetTheme = "dark";
     }
-
+    document.getElementById('dark-mode-button').src = `./shared/icons/${targetTheme}-mode.png`;
 
     document.documentElement.setAttribute('data-theme', targetTheme)
     localStorage.setItem('theme', targetTheme);
