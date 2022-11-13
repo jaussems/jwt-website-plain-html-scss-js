@@ -62,6 +62,9 @@ html[data-theme='dark'] {
   }
   
   &__image {
+    display: flex;
+    align-items: center;
+    
     &__img-1 {
       border-radius: 99px;
       height: 20rem;

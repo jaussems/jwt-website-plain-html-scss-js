@@ -87,6 +87,10 @@ html[data-theme=dark] {
 .intro__text {
   width: 40rem;
 }
+.intro__image {
+  display: flex;
+  align-items: center;
+}
 .intro__image__img-1 {
   border-radius: 99px;
   height: 20rem;
