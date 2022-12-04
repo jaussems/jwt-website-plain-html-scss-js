@@ -1,0 +1,8 @@
+@mixin icon($image) {
+    background: {
+        image:url($image);
+        repeat: no-repeat;
+        height: 5rem;
+        width: 5rem;
+    }
+}

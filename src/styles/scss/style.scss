@@ -1,11 +1,12 @@
 @import "variables";
 @import "root";
 @import "fonts";
+@import "grid";
 body {
   background-color: var(--background-color);
   color: var(--text-color);
   transition: background var(--transition-duration) ease-in-out;
-  
+  font-family: 'Quicksand Medium', sans-serif;
 }
 
 a {
@@ -55,10 +56,12 @@ html[data-theme='dark'] {
 .intro {
   display: flex;
   flex-direction: row;
+  justify-content:center ;
   background-color: var(--secondary-color);
-  
+  gap: 5rem;
   &__text {
     width: 40rem;
+
   }
   
   &__image {
@@ -75,13 +78,55 @@ html[data-theme='dark'] {
 
 }
 
-p {
-  // font-family: 'RobotoSlab Medium', sans-serif;
-  font-family: 'Quicksand Medium', sans-serif;
+
+.skills {
+  &__progress-bar {
+    border:0.25rem solid var(--link-color);
+   
+    width:25rem;
+    height: 1.25rem;
+    border-radius: 5rem;
+
+  }
+  
+  
+  
+  &__innersection {
+  
+   
+
+    
+
+     
+
+
+
+  }  
+}
+
+
+h1 {
+  text-align: center;
+}
+
+ul {
+  display: grid;
+  grid-template-columns: repeat(2, 2fr);
+
+  
   
 }
 
-a,
-h1 {
-  font-family: 'Quicksand Regular', sans-serif;
+li {
+list-style: none;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem;
+  }
+.icon {
+ 
+    height: 5rem;
+    width: 5rem
+  
+
 }
