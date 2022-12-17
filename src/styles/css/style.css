@@ -5088,10 +5088,10 @@ html[data-theme=dark] {
 }
 .intro__image {
   display: flex;
-}
-.intro__image__img-1 {
-  border-radius: 99px;
   height: 20rem;
+}
+.intro__image img {
+  border-radius: 99px;
 }
 
 h1 {
