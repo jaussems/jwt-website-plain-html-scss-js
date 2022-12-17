@@ -5083,31 +5083,17 @@ html[data-theme=dark] {
 }
 
 .intro {
-  display: flex;
-  flex-direction: row;
   justify-content: center;
   background-color: var(--secondary-color);
-  gap: 5rem;
-}
-.intro__text {
-  width: 40rem;
 }
 .intro__image {
   display: flex;
-  align-items: center;
 }
 .intro__image__img-1 {
   border-radius: 99px;
   height: 20rem;
-  vertical-align: bottom;
 }
 
-.skills__progress-bar {
-  border: 0.25rem solid var(--link-color);
-  width: 25rem;
-  height: 1.25rem;
-  border-radius: 5rem;
-}
 h1 {
   text-align: center;
 }
@@ -5119,14 +5105,15 @@ ul {
 
 li {
   list-style: none;
-  align-items: center;
-  justify-content: space-between;
-  padding: 1rem;
 }
 
 .icon {
   height: 5rem;
   width: 5rem;
+}
+
+p, li {
+  font-size: 2.9vmin;
 }
 
 /*# sourceMappingURL=style.css.map */
