@@ -65,12 +65,12 @@ html[data-theme='dark'] {
   // }
   
   &__image {
-    display: flex;
-   // align-items: center;
-   height: 20rem;
-   img {
-     border-radius: 99px;
-   }
+    //display: flex;
+    align-items: center;
+   object-fit: contain;
+   max-height:20rem;
+   border-radius: 99px;
+  
 
   }
 
@@ -115,4 +115,10 @@ list-style: none;
 p, li
 {
   font-size: 2.90vmin;
+}
+
+.align-image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }

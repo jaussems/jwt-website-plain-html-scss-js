@@ -5087,10 +5087,9 @@ html[data-theme=dark] {
   background-color: var(--secondary-color);
 }
 .intro__image {
-  display: flex;
-  height: 20rem;
-}
-.intro__image img {
+  align-items: center;
+  object-fit: contain;
+  max-height: 20rem;
   border-radius: 99px;
 }
 
@@ -5114,6 +5113,12 @@ li {
 
 p, li {
   font-size: 2.9vmin;
+}
+
+.align-image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 /*# sourceMappingURL=style.css.map */
