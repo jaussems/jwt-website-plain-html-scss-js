@@ -5089,17 +5089,16 @@ html[data-theme=dark] {
 .intro__image {
   align-items: center;
   object-fit: contain;
-  max-height: 20rem;
+  max-height: 25rem;
   border-radius: 99px;
+}
+
+.skills {
+  display: row;
 }
 
 h1 {
   text-align: center;
-}
-
-ul {
-  display: grid;
-  grid-template-columns: repeat(2, 2fr);
 }
 
 li {

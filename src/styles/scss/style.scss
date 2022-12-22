@@ -68,7 +68,7 @@ html[data-theme='dark'] {
     //display: flex;
     align-items: center;
    object-fit: contain;
-   max-height:20rem;
+   max-height:25rem;
    border-radius: 99px;
   
 
@@ -78,8 +78,8 @@ html[data-theme='dark'] {
 
 
 .skills {
- 
   
+  display: row;
   
  
 }
@@ -90,8 +90,8 @@ h1 {
 }
 
 ul {
-  display: grid;
-  grid-template-columns: repeat(2, 2fr);
+  // display: grid;
+  // grid-template-columns: repeat(2, 2fr);
  
   
   
