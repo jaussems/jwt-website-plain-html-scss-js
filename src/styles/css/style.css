@@ -5115,6 +5115,7 @@ li {
 
 p, li {
   font-size: 2.9vmin;
+  text-size-adjust: auto;
 }
 
 .align-image {
@@ -5125,6 +5126,13 @@ p, li {
 
 .icon {
   padding: 2rem;
+}
+
+@media (max-width: 520px) {
+  p,
+li {
+    font-size: 1.5rem;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
