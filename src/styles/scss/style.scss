@@ -55,15 +55,10 @@ html[data-theme='dark'] {
 }
 
 .intro {
-  // display: flex;
-  // flex-direction: row;
+
   justify-content:center ;
   background-color: var(--secondary-color);
-  // gap: 5rem;
-  // &__text {
-  //   width: 40rem;
 
-  // }
   
   &__image {
     //display: flex;
@@ -85,17 +80,12 @@ html[data-theme='dark'] {
  
 }
 
-
-h1 {
+.portfolio {
   text-align: center;
 }
 
-ul {
-  // display: grid;
-  // grid-template-columns: repeat(2, 2fr);
- 
-  
-  
+h1, h2 {
+  text-align: center;
 }
 
 li {
@@ -108,8 +98,6 @@ justify-content:center;
  
     height: 5rem;
     width: 5rem
-  
-
 }
 
 p, li
@@ -134,4 +122,21 @@ li {
   font-size: 1.5rem;
 }
 
+
+}
+
+.dwnldbtn {
+  text-align: center;
+  background-color: rgb(0, 0, 0);
+  border: none;
+  color: white;
+  padding: 12px 30px;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+.dwnldbtn:hover {
+  background-color: white;
+  color: black;
+  text-decoration: underline;
 }

@@ -5097,7 +5097,11 @@ html[data-theme=dark] {
   display: row;
 }
 
-h1 {
+.portfolio {
+  text-align: center;
+}
+
+h1, h2 {
   text-align: center;
 }
 
@@ -5133,6 +5137,21 @@ p, li {
 li {
     font-size: 1.5rem;
   }
+}
+.dwnldbtn {
+  text-align: center;
+  background-color: black;
+  border: none;
+  color: white;
+  padding: 12px 30px;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+.dwnldbtn:hover {
+  background-color: white;
+  color: black;
+  text-decoration: underline;
 }
 
 /*# sourceMappingURL=style.css.map */
