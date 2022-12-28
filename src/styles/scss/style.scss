@@ -51,6 +51,7 @@ html[data-theme='dark'] {
 .__icon{
   height: 2.5rem;
   width: 2.5rem
+
 }
 
 .intro {
@@ -121,4 +122,8 @@ p, li
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.icon {
+  padding: 2rem;
 }
