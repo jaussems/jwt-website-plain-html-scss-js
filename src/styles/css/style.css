@@ -5102,7 +5102,10 @@ h1 {
 }
 
 li {
+  display: flex;
   list-style: none;
+  align-items: center;
+  justify-content: center;
 }
 
 .icon {
