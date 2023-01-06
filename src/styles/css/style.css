@@ -5137,6 +5137,10 @@ p, li {
 li {
     font-size: 1.5rem;
   }
+
+  ul li {
+    font-size: 2rem;
+  }
 }
 .dwnldbtn {
   text-align: center;
