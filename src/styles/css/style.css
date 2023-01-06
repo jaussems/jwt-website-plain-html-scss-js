@@ -5100,6 +5100,10 @@ html[data-theme=dark] {
 .portfolio {
   text-align: center;
 }
+.portfolio img {
+  height: 4rem;
+  margin-bottom: 2rem;
+}
 
 h1, h2 {
   text-align: center;
