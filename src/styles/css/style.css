@@ -5166,4 +5166,20 @@ li {
   text-decoration: underline;
 }
 
+.contact-modal {
+  display: block;
+  height: 100%;
+  width: 100%;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  align-items: center;
+  font-size: 2rem;
+}
+.contact-modal input {
+  width: 10rem;
+  align-self: center;
+  margin: 2rem 0 2rem;
+}
+
 /*# sourceMappingURL=style.css.map */
