@@ -1,11 +1,12 @@
 @import "variables";
 @import "root";
 @import "fonts";
+@import "grid";
 body {
   background-color: var(--background-color);
   color: var(--text-color);
   transition: background var(--transition-duration) ease-in-out;
-  
+  font-family: 'Quicksand Medium', sans-serif;
 }
 
 a {
@@ -50,35 +51,107 @@ html[data-theme='dark'] {
 .__icon{
   height: 2.5rem;
   width: 2.5rem
+
 }
 
 .intro {
-  display: flex;
-  flex-direction: row;
+
+  justify-content:center ;
   background-color: var(--secondary-color);
-  
-  &__text {
-    width: 40rem;
-  }
+
   
   &__image {
-    &__img-1 {
-      border-radius: 99px;
-      height: 20rem;
-      vertical-align: bottom;
-    }
+    //display: flex;
+    align-items: center;
+   object-fit: contain;
+   max-height:25rem;
+   border-radius: 99px;
+  
 
   }
 
 }
 
-p {
-  // font-family: 'RobotoSlab Medium', sans-serif;
-  font-family: 'Quicksand Medium', sans-serif;
+
+.skills {
   
+  display: row;
+  
+ 
 }
 
-a,
-h1 {
-  font-family: 'Quicksand Regular', sans-serif;
+.portfolio {
+  text-align: center;
+
+  img {
+    height: 4rem;
+    margin-bottom: 2rem;
+    
+  }
+}
+
+h1, h2 {
+  text-align: center;
+}
+
+li {
+  display: flex;
+list-style: none;
+align-items:center;
+justify-content:center;
+  }
+.icon {
+ 
+    height: 5rem;
+    width: 5rem
+}
+
+p, li
+{
+  font-size: 2.90vmin;
+  text-size-adjust: auto;
+
+}
+
+.align-image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.icon {
+  padding: 2rem;
+}
+@media (max-width:520px){
+p,
+li {
+  font-size: 1.5rem;
+}
+
+ul li {
+font-size: 2rem;
+
+}
+
+ul div {
+  width: 100vh;
+}
+
+
+}
+
+.dwnldbtn {
+  text-align: center;
+  background-color: rgb(0, 0, 0);
+  border: none;
+  color: white;
+  padding: 12px 30px;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+.dwnldbtn:hover {
+  background-color: white;
+  color: black;
+  text-decoration: underline;
 }
