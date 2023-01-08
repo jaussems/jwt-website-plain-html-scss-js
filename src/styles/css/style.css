@@ -5145,6 +5145,10 @@ li {
   ul li {
     font-size: 2rem;
   }
+
+  ul div {
+    width: 100vh;
+  }
 }
 .dwnldbtn {
   text-align: center;
