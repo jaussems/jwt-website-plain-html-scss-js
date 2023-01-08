@@ -7,14 +7,138 @@
 
 </head>
 <body >
-<button onclick="darkModeToggle()">Toggle Button </button>
-<div >
-    <h1>This is a Heading</h1>
-    <p>This is a paragraph.</p>
-    <a>This is a link</a>
- 
-  <p class="color-secondary">TESTING COLOR</p>
+<header>
+  <ul class="col-lg-12">
+  <nav class="d-flex align-items-baseline">
+    <li>
+      <a href="/mystory">My Story</a> 
+    </li>
+    <li>
+      <a href="/skills">Skills</a> 
+    </li>
+    <li>
+      <a href="/portfolio">Portfolio</a> 
+    </li>
+    <li>
+      <a href="/contact">Contact</a>
+    </li>
+    <li class="align-self-end ">
+      <button class=" " onclick="darkModeToggle()"><img  id="dark-mode-button" class="__icon" src="./shared/icons/light-mode.png" alt="dark mode icon" /></button>
+    </li>
+  </ul>
+</header>
+<div class="container">
+ <div class="col-lg-12">
+  <h1>Welcome </h1>
+  <div class="row">
+    <div class="col-lg-7 ">
+    <div class="intro__text">
+      <p>My name is Jannes I am 26 years old and currently live in Purmerend. As a young boy I was always busy with computers, started gaming and fixing / repairing computers a lot in my earlier years, I discovered at a young age that PC and IT in general fascinate me. </p>
+      <p>After trying multiple different things throughout my life, for example: becoming a social worker, I realized I had to follow my true ambitions: to become a programmer. To do this was going to be a tough challenge, one does not simply become one overnight, one does through working hard and to keep learning. </p>  
+      <p>I signed up for the Codaisseur Full Stack Bootcamp this year to fulfil my dream, after 11 intensive weeks of building awesome webbaps and completing assessments I managed to overcome obstacles and succeed along side my peers. I know certain technologies you can see listed below.</p> 
+      <p>Although I can call myself a developer now,there still much to learn. My mission is continuous learning, I keep learning, I keep growing, a little bit better each day is still a little bit!</p>
+      <div class="d-flex justify-content-between align-items-center">
+        <a href="https://www.linkedin.com/in/jannesaussems/">
+          <img
+          class="icon"
+            alt="LinkedIn"
+            src="https://cdn.jsdelivr.net/npm/simple-icons@v3/icons/linkedin.svg"
+          />
+        </a>
+        <a href="https://github.com/jaussems">
+          <img
+            class="icon"
+            id="github-icon"
+            src="./shared/icons/github-mark.svg"
+            alt="Github logo"
+          />
+        </a>
+        <a href="https://docdro.id/LHkTU08">
+          <button class="dwnldbtn">Download CV</button>
+        </a>
+      </div>
+    
+    </div>
+  </div>
+  <div class="col-lg-5  align-image">
+      <img class="intro__image"  src="./shared/images/jannes.jpeg" />
+  </div>  
+  </div>
+  <div class="column">
 
+  
+  <div class="skills">
+    <h1>My Skills</h1>
+    <div class="col-lg-12 col-md-12  col-12 ">
+      <ul class="d-flex flex-xs-column  flex-wrap justify-content-sm-evenly  justify-content-center ">
+        <div class="d-flex align-items-sm-center  pe-3   ">
+          <img class="icon" src="./shared/icons/skills-icons/html-icon.png" />
+          <li>HTML    </li>
+       </div>
+       <div class="d-flex  align-items-sm-center pe-3 "> 
+         <img class="icon" src="./shared/icons/skills-icons/css-icon.png" />
+        <li >CSS  </li>
+       </div>
+       <div class="d-flex  align-items-sm-center pe-3 "> 
+         <img class="icon" src="./shared/icons/skills-icons/sass-icon.svg" />
+        <li >SASS  </li>
+       </div>
+       <div class="d-flex  align-items-sm-center pe-3 "> 
+         <img class="icon" src="./shared/icons/skills-icons/javascript-icon.png" />
+        <li>Javascript  </li>
+       </div>
+       <div class="d-flex  align-items-sm-center pe-3 "> 
+         <img class="icon" src="./shared/icons/skills-icons/typescript-icon.png" />
+        <li>Typescript  </li>
+       </div>
+       <div class="d-flex  align-items-sm-center pe-3 "> 
+         <img class="icon" src="./shared/icons/skills-icons/angular-icon.png" />
+        <li>Angular  </li>
+       </div>
+       <div class="d-flex  align-items-sm-center  pe-3"> 
+         <img class="icon" src="./shared/icons/skills-icons/react-icon.png" />
+        <li>React </li>
+       </div>
+       <div class="d-flex  align-items-sm-center pe-3 "> 
+         <img class="icon" src="./shared/icons/skills-icons/redux.svg" />
+        <li>Redux </li>
+       </div>
+       <div class="d-flex  align-items-sm-center pe-3 "> 
+         <img class="icon" src="./shared/icons/skills-icons/sequelize-icon.png" />
+        <li>Sequelize </li>
+       </div>
+       <div class="d-flex  align-items-sm-center  pe-3"> 
+         <img class="icon" src="./shared/icons/skills-icons/express-icon.png" />
+        <li>Express </li>
+       </div>
+       <div class="d-flex  align-items-sm-center pe-3 "> 
+         <img class="icon" src="./shared/icons/skills-icons/nodeJs.svg" />
+        <li>Node </li>
+       </div>
+      </ul>
+
+
+    </div>
+   
+  </div>
+</div>
+  <div class=" portfolio">
+    <h1>Here are some of my portfolio projects</h1>
+    <div class="col-12 ">
+      <div class=" d-flex flex-column"><h2>Portfolio site 1 </h2>
+        <img class="portfolio-icon" src="./shared/icons/icons8-bitcoin.svg" />
+        <a href="https://see-crypto-app.netlify.app/">See Crypto App</a>
+      </div>
+      <div class="d-flex flex-column"><h2>Portfolio site 2</h2>
+        <img class="portfolio-icon" src="./shared/icons/icons8-bitcoin.svg" />
+        <a href="https://walking-tour.netlify.app/">Walking tour Site</a>
+      </div>
+    </div>
+  </div>
+  <div class=" contact"></div>
+  
+
+</div>
 </div>
 
 </body>

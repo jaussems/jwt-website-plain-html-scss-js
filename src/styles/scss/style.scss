@@ -1,17 +1,32 @@
 @import "variables";
 @import "root";
-
+@import "fonts";
+@import "grid";
 body {
-  background: var(--background-color);
+  background-color: var(--background-color);
   color: var(--text-color);
   transition: background var(--transition-duration) ease-in-out;
-
+  font-family: 'Quicksand Medium', sans-serif;
 }
 
 a {
   color: var(--link-color);
 }
 
+button {
+  background: transparent;
+  border: none !important;
+  font-size:0;
+}
+
+nav {
+  a {
+    text-decoration: none;
+    font-size: large;
+    justify-content: center;
+    margin: 0em 1em 1em 1em !important;
+  }
+}
 a:hover {
   text-decoration: underline;
   filter: brightness(80%);
@@ -21,12 +36,122 @@ a:hover {
   
 html[data-theme='light'] {
   --background-color: #fff;
+  --secondary-color: rgb(255, 255, 255);
   --text-color: #121416d8;
-  --link-color: #ee8524;
+  --link-color: #2f1f86;
 }
 
 html[data-theme='dark'] {
   --background-color: #212a2e;
+  --secondary-color: rgb(37, 37, 46);
   --text-color: #F7F8F8;
   --link-color: #828fff;
+}
+
+.__icon{
+  height: 2.5rem;
+  width: 2.5rem
+
+}
+
+.intro {
+
+  justify-content:center ;
+  background-color: var(--secondary-color);
+
+  
+  &__image {
+    //display: flex;
+    align-items: center;
+   object-fit: contain;
+   max-height:25rem;
+   border-radius: 99px;
+  
+
+  }
+
+}
+
+
+.skills {
+  
+  display: row;
+  
+ 
+}
+
+.portfolio {
+  text-align: center;
+
+  img {
+    height: 4rem;
+    margin-bottom: 2rem;
+    
+  }
+}
+
+h1, h2 {
+  text-align: center;
+}
+
+li {
+  display: flex;
+list-style: none;
+align-items:center;
+justify-content:center;
+  }
+.icon {
+ 
+    height: 5rem;
+    width: 5rem
+}
+
+p, li
+{
+  font-size: 2.90vmin;
+  text-size-adjust: auto;
+
+}
+
+.align-image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.icon {
+  padding: 2rem;
+}
+@media (max-width:520px){
+p,
+li {
+  font-size: 1.5rem;
+}
+
+ul li {
+font-size: 2rem;
+
+}
+
+ul div {
+  width: 100vh;
+}
+
+
+}
+
+.dwnldbtn {
+  text-align: center;
+  background-color: rgb(0, 0, 0);
+  border: none;
+  color: white;
+  padding: 12px 30px;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+.dwnldbtn:hover {
+  background-color: white;
+  color: black;
+  text-decoration: underline;
 }

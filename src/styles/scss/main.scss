@@ -1,0 +1,7 @@
+@use 'icons' as *;
+
+:root {
+    @each $icon in $icons {
+        icon:$icon;
+    }
+}
