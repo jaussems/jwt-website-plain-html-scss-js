@@ -158,9 +158,12 @@ ul div {
 
 .contact-modal {
   display: block;
+  background-color: #2f1f86;
   height: 100%;
+  visibility: hidden;
   width: 100%;
   text-align: center;
+  position: absolute;
   margin: 0 ;
   padding: 0;
   align-items: center;
@@ -171,4 +174,13 @@ ul div {
     margin: 2rem 0 2rem;
   }
 
+}
+
+#contact :hover {
+  cursor: pointer;
+}
+
+.contact-button {
+  button {
+    color: red; }
 }

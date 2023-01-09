@@ -1,5 +1,6 @@
 
 let isDark = false;
+let isModalVisible = false;
 let storedTheme = localStorage.getItem('theme') || (window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
 
 if (storedTheme)
@@ -8,11 +9,11 @@ if (storedTheme)
 const darkModeToggle = () => {
     var currentTheme = document.documentElement.getAttribute("data-theme");
     var targetTheme = "light";
-    document.getElementById('github-icon').src ='./shared/icons/github-mark.svg';
-    
+    document.getElementById('github-icon').src = './shared/icons/github-mark.svg';
+
     if (currentTheme === "light") {
         targetTheme = "dark";
-        document.getElementById('github-icon').src ='./shared/icons/github-mark-white.svg';
+        document.getElementById('github-icon').src = './shared/icons/github-mark-white.svg';
     }
     document.getElementById('dark-mode-button').src = `./shared/icons/${targetTheme}-mode.png`;
 
@@ -26,6 +27,20 @@ const getAge = birthDate => Math.floor((new Date() - new Date(birthDate).getTime
 
 let myAge = getAge('1996-08-29');
 
-document.querySelector("myAge").innerText = '23';
+//document.querySelector("myAge").innerText = '23';
 
-console.log(myAge);
+//console.log(myAge);
+
+
+//document.getElementById('contact').addEventListener('click', this.displayModal());
+
+//console.log(document.querySelector('contact'))
+const displayModal = (event) => {
+    const modalElement = document.querySelector('.contact-modal');
+    this.isModalVisible = !this.isModalVisible;
+    console.log({}, modalElement)
+
+
+    this.isModalVisible ? modalElement.style.visibility = 'visible' : modalElement.style.visibility = 'hidden';
+    event.preventDefault();
+}
