@@ -1,5 +1,4 @@
 :root {
-  --background-color: rgb(214, 7, 7);
   --secondary-color: darkblue;
   --text-color: #121416d8;
   --link-color: #543fd7;
@@ -5038,6 +5037,7 @@ body {
   color: var(--text-color);
   transition: background var(--transition-duration) ease-in-out;
   font-family: "Quicksand Medium", sans-serif;
+  z-index: 1 !important;
 }
 
 a {
@@ -5050,6 +5050,17 @@ button {
   font-size: 0;
 }
 
+nav {
+  position: fixed;
+  left: 0;
+  width: 100%;
+  border-bottom: 1px solid black;
+  border-radius: 0.3rem;
+  background: white;
+  height: 4rem;
+  background-color: rgba(255, 255, 255, 0.116);
+  z-index: 2 !important;
+}
 nav a {
   text-decoration: none;
   font-size: large;
@@ -5164,6 +5175,98 @@ li {
   background-color: white;
   color: black;
   text-decoration: underline;
+}
+
+.contact-modal {
+  display: block;
+  height: 100vh;
+  visibility: hidden;
+  background-color: grey;
+  background: grey;
+  box-shadow: 0 0 0 9999px rgba(0, 0, 0, 0.5);
+  text-align: center;
+  position: fixed;
+  overflow: auto;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  max-width: 100%;
+  max-height: 100%;
+  z-index: 5 !important;
+}
+.contact-modal_body {
+  font-size: 2rem;
+  background-color: #F7F8F8;
+  justify-content: center;
+  -webkit-animation: animatetop 4s;
+  position: relative;
+  background-color: #fefefe;
+  padding: 0;
+  border-radius: 2rem;
+  border: 1px solid #888;
+  width: 80%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  animation: animatetop 3.4s ease-in;
+}
+.contact-modal input {
+  width: 10rem;
+  align-self: center;
+  margin: 2rem 0 2rem;
+}
+
+.modal-body {
+  font-size: 2rem;
+  background-color: #F7F8F8;
+  justify-content: center;
+  -webkit-animation: animatetop 4s;
+  position: absolute;
+  background-color: #fefefe;
+  margin: auto;
+  padding: 0;
+  border: 1px solid #888;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  animation: animatetop 1.4s ease-in;
+}
+
+#contact :hover {
+  cursor: pointer;
+}
+
+.contact-button button {
+  color: red;
+}
+
+.body.modal-open {
+  overflow: hidden;
+  position: fixed;
+}
+
+/* Add Animation */
+@-webkit-keyframes animatetop {
+  from {
+    top: -300px;
+    opacity: 0;
+  }
+  to {
+    top: 0;
+    opacity: 1;
+  }
+}
+@keyframes animatetop {
+  from {
+    top: -300px;
+    opacity: 0;
+  }
+  to {
+    top: 0;
+    opacity: 1;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
