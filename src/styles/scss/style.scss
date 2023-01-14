@@ -7,7 +7,7 @@ body {
   color: var(--text-color);
   transition: background var(--transition-duration) ease-in-out;
   font-family: 'Quicksand Medium', sans-serif;
-  z-index: 1 !important;
+  z-index: 0 !important;
 }
 
 a {
@@ -26,8 +26,9 @@ nav {
   width: 100%;
   border-bottom: 1px solid black;
   border-radius: 0.3rem;
-  background: white;
+  background-color: white;
   height: 4rem;
+  top: 0;
   background-color: rgba(255, 255, 255, 0.116);
   z-index:2 !important;
   a {
