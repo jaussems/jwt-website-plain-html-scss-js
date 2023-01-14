@@ -7,6 +7,7 @@ body {
   color: var(--text-color);
   transition: background var(--transition-duration) ease-in-out;
   font-family: 'Quicksand Medium', sans-serif;
+  z-index: 1;
 }
 
 a {
@@ -20,6 +21,12 @@ button {
 }
 
 nav {
+  //position: fixed;
+  //top: 0;
+  width: 100%;
+  //border: 1px solid black;
+  background-color: rgba(255, 255, 255, 0.116);
+  z-index:2;
   a {
     text-decoration: none;
     font-size: large;
@@ -158,21 +165,31 @@ ul div {
 
 .contact-modal {
   display: block;
-  background-color: #2f1f86;
-  height: 100%;
+  height: 100vh;
   visibility: hidden;
-  width: 100%;
+  background-color: grey;
+  min-width: 100vh;
   text-align: center;
-  position: absolute;
-  margin: 0 ;
-  padding: 0;
-  align-items: center;
-  font-size: 2rem;
+  position: fixed;
+  overflow: auto;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  &_body {
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    overflow: hidden;
+  }
+
     input {
     width: 10rem;
     align-self: center;
     margin: 2rem 0 2rem;
   }
+
+ 
 
 }
 
@@ -183,4 +200,9 @@ ul div {
 .contact-button {
   button {
     color: red; }
+}
+
+.body.modal-open {
+  overflow: hidden;
+  position: fixed;
 }
