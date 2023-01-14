@@ -37,26 +37,19 @@ let myAge = getAge('1996-08-29');
 //console.log(document.querySelector('contact'))
 const toggleModal = (event) => {
     const modalElement = document.querySelector('.contact-modal');
+    const modalBody = document.querySelector('.contact-modal_body');
     this.isModalVisible = !this.isModalVisible;
-    console.log({}, modalElement)
-    // document.getElementsByName('body').style.overflow = 'hidden';
-
+    modalBody.classList.remove("run-animation");
     if (this.isModalVisible) {
         modalElement.style.visibility = 'visible'
         document.body.style.overflow = 'hidden';
-        //document.getElementsByName('body').addClass('body.modal-open');
-        //event.preventDefault();
+
     }
     else {
         modalElement.style.visibility = 'hidden';
         document.body.style.overflow = 'auto';
-        //event.preventDefault();
     }
-    // this.isModalVisible ?
-    //     modalElement.style.visibility = 'visible'
-    //     : modalElement.style.visibility = 'hidden';
-
-    //document.getElementsByName('body').style.overflow = 'hidden';
+    modalBody.classList.add("run-animation");
 
     event.preventDefault();
 }

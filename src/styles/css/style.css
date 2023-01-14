@@ -5186,15 +5186,40 @@ li {
   left: 0;
 }
 .contact-modal_body {
-  justify-content: center;
-  align-items: center;
   font-size: 2rem;
-  overflow: hidden;
+  background-color: #F7F8F8;
+  justify-content: center;
+  -webkit-animation: animatetop 4s;
+  position: relative;
+  background-color: #fefefe;
+  padding: 0;
+  border: 1px solid #888;
+  width: 80%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  animation: animatetop 1.4s ease-in;
 }
 .contact-modal input {
   width: 10rem;
   align-self: center;
   margin: 2rem 0 2rem;
+}
+
+.modal-body {
+  font-size: 2rem;
+  background-color: #F7F8F8;
+  justify-content: center;
+  -webkit-animation: animatetop 4s;
+  position: absolute;
+  background-color: #fefefe;
+  margin: auto;
+  padding: 0;
+  border: 1px solid #888;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  animation: animatetop 1.4s ease-in;
 }
 
 #contact :hover {
@@ -5208,6 +5233,28 @@ li {
 .body.modal-open {
   overflow: hidden;
   position: fixed;
+}
+
+/* Add Animation */
+@-webkit-keyframes animatetop {
+  from {
+    top: -300px;
+    opacity: 0;
+  }
+  to {
+    top: 0;
+    opacity: 1;
+  }
+}
+@keyframes animatetop {
+  from {
+    top: -300px;
+    opacity: 0;
+  }
+  to {
+    top: 0;
+    opacity: 1;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
