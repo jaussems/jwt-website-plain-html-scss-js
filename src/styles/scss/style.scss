@@ -21,12 +21,17 @@ button {
 }
 
 nav {
-  //position: fixed;
+  position: fixed;
   //top: 0;
+  left: 0;
   width: 100%;
+  border-bottom: 1px solid black;
+  border-radius: 0.3rem;
   //border: 1px solid black;
+  background: white;
+  height: 4rem;
   background-color: rgba(255, 255, 255, 0.116);
-  z-index:2;
+  z-index:4 !important;
   a {
     text-decoration: none;
     font-size: large;
@@ -168,7 +173,9 @@ ul div {
   height: 100vh;
   visibility: hidden;
   background-color: grey;
-  min-width: 100vh;
+  background: grey;
+  
+  box-shadow: 0 0 0 9999px rgba(0, 0, 0, 0.5);
   text-align: center;
   position: fixed;
   overflow: auto;
@@ -176,6 +183,9 @@ ul div {
   right: 0;
   bottom: 0;
   left: 0;
+  width: 100%;
+  max-width: 100%;
+  max-height: 100%;
   &_body {
     font-size: 2rem;
     background-color: #F7F8F8;
@@ -183,16 +193,15 @@ ul div {
     -webkit-animation: animatetop 4s ;
     position: relative;
     background-color: #fefefe;
- 
     padding: 0;
+    border-radius: 2rem;
     border: 1px solid #888;
     width: 80%;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    animation: animatetop 1.4s  ease-in;
-    //animation-name: animatetop;
-    //animation-duration: 0.4s
+    animation: animatetop 3.4s  ease-in;
+
   }
 
     input {
