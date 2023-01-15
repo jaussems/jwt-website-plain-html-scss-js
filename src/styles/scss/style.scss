@@ -7,7 +7,8 @@ body {
   color: var(--text-color);
   transition: background var(--transition-duration) ease-in-out;
   font-family: 'Quicksand Medium', sans-serif;
-  z-index: 1 !important;
+  z-index: 0 !important;
+  scroll-behavior: smooth;
 }
 
 a {
@@ -20,16 +21,19 @@ button {
   font-size:0;
 }
 
+
+
 nav {
   position: fixed;
   left: 0;
   width: 100%;
-  border-bottom: 1px solid black;
+  border-bottom: 1px solid var(--text-color);
   border-radius: 0.3rem;
-  background: white;
+  background-color: white;
   height: 4rem;
+  top: 0;
   background-color: rgba(255, 255, 255, 0.116);
-  z-index:2 !important;
+  z-index:3 !important;
   a {
     text-decoration: none;
     font-size: large;
@@ -37,6 +41,8 @@ nav {
     margin: 0em 1em 1em 1em !important;
   }
 }
+
+
 a:hover {
   text-decoration: underline;
   filter: brightness(80%);
@@ -138,6 +144,11 @@ li {
   font-size: 1.5rem;
 }
 
+ul {
+  height: 100%;
+  
+}
+
 ul li {
 font-size: 2rem;
 
@@ -172,7 +183,6 @@ ul div {
   visibility: hidden;
   background-color: grey;
   background: grey;
-  
   box-shadow: 0 0 0 9999px rgba(0, 0, 0, 0.5);
   text-align: center;
   position: fixed;
@@ -187,17 +197,17 @@ ul div {
   z-index: 5 !important;
   &_body {
     font-size: 2rem;
-    background-color: #F7F8F8;
+    background-color: var(--background-color);
     justify-content: center;
     -webkit-animation: animatetop 4s ;
     position: relative;
-    background-color: #fefefe;
     padding: 0;
     border-radius: 2rem;
     border: 1px solid #888;
     width: 80%;
     top: 50%;
     left: 50%;
+    color: var(--text-color);
     transform: translate(-50%, -50%);
     animation: animatetop 3.4s  ease-in;
 
@@ -253,4 +263,13 @@ ul div {
 @keyframes animatetop {
   from {top:-300px; opacity:0}
   to {top:0; opacity:1}
+}
+
+.h-100 {
+  height: 100%;
+}
+
+
+.bg-color {
+  background-color: var(--background-color);
 }
