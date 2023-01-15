@@ -340,3 +340,26 @@ input:checked + .toggle-button-label svg.sun {
 input:checked + .toggle-button-label svg.moon {
   fill:#fff;
 }
+
+.toggle-button-label svg {
+  position: absolute;
+  width: 1.5rem;
+  top:0;
+  z-index: 100;
+}
+.toggle-button-label svg.sun {
+  left:0.35rem;
+  fill:#fff;
+  transition: 0.3s;
+}
+.toggle-button-label svg.moon {
+  left:2.35rem;
+  fill:#7e7e7e;
+  transition: 0.3s;
+}
+input:checked + .toggle-button-label svg.sun {
+  fill:#7e7e7e;
+}
+input:checked + .toggle-button-label svg.moon {
+  fill:#fff;
+}
