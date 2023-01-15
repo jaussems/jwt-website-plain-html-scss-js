@@ -311,9 +311,32 @@ input:checked + label:after {
   transform: translateX(-100%);
   background: linear-gradient(180deg,#777,#3a3a3a);
 }
-label, label:after {
+.toggle-button-label, .toggle-button-label:after {
   transition: 0.3s
 }
-label:active:after{ 
+.toggle-button-label:active:after{ 
   width: 2rem; 
+}
+
+.toggle-button-label svg {
+  position: absolute;
+  width: 120px;
+  top:40px;
+  z-index: 100;
+}
+.toggle-button-label svg.sun {
+  left:40px;
+  fill:#fff;
+  transition: 0.3s;
+}
+.toggle-button-label svg.moon {
+  left:340px;
+  fill:#7e7e7e;
+  transition: 0.3s;
+}
+input:checked + .toggle-button-label svg.sun {
+  fill:#7e7e7e;
+}
+input:checked + .toggle-button-label svg.moon {
+  fill:#fff;
 }
