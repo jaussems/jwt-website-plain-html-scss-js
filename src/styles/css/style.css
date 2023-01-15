@@ -5395,4 +5395,15 @@ input:checked + .toggle-button-label svg.moon {
   cursor: pointer;
 }
 
+.dropdown-menu {
+  position: absolute;
+  height: 100%;
+  top: calc(100% + .25rem);
+  background-color: var(--background-color);
+  padding: 0.75rem;
+  border-radius: 1.25rem;
+  box-shadow: 0 2px 15px 0 rgba(0, 0, 0, 0.1);
+  opacity: 0;
+}
+
 /*# sourceMappingURL=style.css.map */
