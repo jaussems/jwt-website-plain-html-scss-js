@@ -5065,7 +5065,7 @@ nav {
 }
 nav a {
   text-decoration: none;
-  font-size: large;
+  color: var(--text-color);
   justify-content: center;
   margin: 0em 1em 1em 1em !important;
 }
@@ -5216,7 +5216,7 @@ li {
   left: 50%;
   color: var(--text-color);
   transform: translate(-50%, -50%);
-  animation: animatetop 3.4s ease-in;
+  animation: animatetop 0.4s ease-in;
 }
 .contact-modal input {
   width: 10rem;
@@ -5228,7 +5228,7 @@ li {
   font-size: 2rem;
   background-color: #F7F8F8;
   justify-content: center;
-  -webkit-animation: animatetop 4s;
+  -webkit-animation: animatetop 0.4s;
   position: absolute;
   background-color: #fefefe;
   margin: auto;
@@ -5237,7 +5237,7 @@ li {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  animation: animatetop 1.4s ease-in;
+  animation: animatetop 0.4s ease-in;
 }
 
 #contact :hover {
@@ -5245,7 +5245,10 @@ li {
 }
 
 .contact-button button {
-  color: red;
+  cursor: pointer;
+}
+.contact-button p {
+  color: var(--text-color);
 }
 
 .body.modal-open {
@@ -5280,6 +5283,108 @@ li {
 
 .bg-color {
   background-color: var(--background-color);
+}
+
+.toggle-button-label {
+  width: 4rem;
+  height: 2rem;
+  position: relative;
+  display: block;
+  background: #ebebeb;
+  border-radius: 2rem;
+  top: -0.4rem;
+  box-shadow: inset 0px 5px 15px rgba(0, 0, 0, 0.4), inset 0px -5px 15px rgba(255, 255, 255, 0.4);
+  cursor: pointer;
+}
+
+.toggle-button-label:after {
+  content: "";
+  width: 1.8rem;
+  height: 1.8rem;
+  position: absolute;
+  top: 0.1rem;
+  left: 0.2rem;
+  background: linear-gradient(180deg, #ffcc89, #d8860b);
+  border-radius: 180px;
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.hide-input {
+  width: 0;
+  height: 0;
+  visibility: hidden;
+}
+
+input:checked + label {
+  background: #242424;
+}
+
+input:checked + label:after {
+  left: 4rem;
+  transform: translateX(-100%);
+  background: linear-gradient(180deg, #777, #3a3a3a);
+}
+
+.toggle-button-label, .toggle-button-label:after {
+  transition: 0.3s;
+}
+
+.toggle-button-label:active:after {
+  width: 2rem;
+}
+
+.toggle-button-label svg {
+  position: absolute;
+  width: 120px;
+  top: 40px;
+  z-index: 100;
+}
+
+.toggle-button-label svg.sun {
+  left: 40px;
+  fill: #fff;
+  transition: 0.3s;
+}
+
+.toggle-button-label svg.moon {
+  left: 340px;
+  fill: #7e7e7e;
+  transition: 0.3s;
+}
+
+input:checked + .toggle-button-label svg.sun {
+  fill: #7e7e7e;
+}
+
+input:checked + .toggle-button-label svg.moon {
+  fill: #fff;
+}
+
+.toggle-button-label svg {
+  position: absolute;
+  width: 1.5rem;
+  top: 0;
+  z-index: 100;
+}
+
+.toggle-button-label svg.sun {
+  left: 0.35rem;
+  fill: #fff;
+  transition: 0.3s;
+}
+
+.toggle-button-label svg.moon {
+  left: 2.35rem;
+  fill: #ffff;
+  transition: 0.3s;
+}
+
+input:checked + .toggle-button-label svg.sun {
+  fill: #7e7e7e;
+}
+
+input:checked + .toggle-button-label svg.moon {
+  fill: #fff;
 }
 
 /*# sourceMappingURL=style.css.map */
