@@ -5065,7 +5065,7 @@ nav {
 }
 nav a {
   text-decoration: none;
-  font-size: large;
+  color: var(--text-color);
   justify-content: center;
   margin: 0em 1em 1em 1em !important;
 }
@@ -5216,7 +5216,7 @@ li {
   left: 50%;
   color: var(--text-color);
   transform: translate(-50%, -50%);
-  animation: animatetop 3.4s ease-in;
+  animation: animatetop 0.4s ease-in;
 }
 .contact-modal input {
   width: 10rem;
@@ -5228,7 +5228,7 @@ li {
   font-size: 2rem;
   background-color: #F7F8F8;
   justify-content: center;
-  -webkit-animation: animatetop 4s;
+  -webkit-animation: animatetop 0.4s;
   position: absolute;
   background-color: #fefefe;
   margin: auto;
@@ -5237,7 +5237,7 @@ li {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  animation: animatetop 1.4s ease-in;
+  animation: animatetop 0.4s ease-in;
 }
 
 #contact :hover {
@@ -5245,7 +5245,10 @@ li {
 }
 
 .contact-button button {
-  color: red;
+  cursor: pointer;
+}
+.contact-button p {
+  color: var(--text-color);
 }
 
 .body.modal-open {
