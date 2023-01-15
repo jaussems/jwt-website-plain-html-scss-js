@@ -8,6 +8,7 @@ body {
   transition: background var(--transition-duration) ease-in-out;
   font-family: 'Quicksand Medium', sans-serif;
   z-index: 0 !important;
+  scroll-behavior: smooth;
 }
 
 a {
@@ -20,6 +21,8 @@ button {
   font-size:0;
 }
 
+
+
 nav {
   position: fixed;
   left: 0;
@@ -30,7 +33,7 @@ nav {
   height: 4rem;
   top: 0;
   background-color: rgba(255, 255, 255, 0.116);
-  z-index:2 !important;
+  z-index:3 !important;
   a {
     text-decoration: none;
     font-size: large;
@@ -38,6 +41,8 @@ nav {
     margin: 0em 1em 1em 1em !important;
   }
 }
+
+
 a:hover {
   text-decoration: underline;
   filter: brightness(80%);
@@ -137,6 +142,11 @@ p, li
 p,
 li {
   font-size: 1.5rem;
+}
+
+ul {
+  height: 100%;
+
 }
 
 ul li {
@@ -254,4 +264,8 @@ ul div {
 @keyframes animatetop {
   from {top:-300px; opacity:0}
   to {top:0; opacity:1}
+}
+
+.h-100 {
+  height: 100%;
 }
