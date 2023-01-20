@@ -1,6 +1,7 @@
 
 let isDark = false;
 let isModalVisible = false;
+let toggleDropDown = false;
 let storedTheme = localStorage.getItem('theme') || (window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
 
 if (storedTheme)
@@ -25,14 +26,7 @@ const getAge = birthDate => Math.floor((new Date() - new Date(birthDate).getTime
 
 let myAge = getAge('1996-08-29');
 
-//document.querySelector("myAge").innerText = '23';
 
-//console.log(myAge);
-
-
-//document.getElementById('contact').addEventListener('click', this.toggleModal());
-
-//console.log(document.querySelector('contact'))
 const toggleModal = (event) => {
     const modalElement = document.querySelector('.contact-modal');
     const modalBody = document.querySelector('.contact-modal_body');
@@ -50,4 +44,23 @@ const toggleModal = (event) => {
     modalBody.classList.add("run-animation");
 
     event.preventDefault();
+}
+
+
+
+const toggleDropdownMenu = (event) => {
+
+    this.toggleDropDown = !this.toggleDropDown;
+    const dropDownElement = document.querySelector('.dropdown-menu');
+
+    if (this.toggleDropDown) {
+
+        dropDownElement.style.opacity = 1;
+    }
+    else
+        dropDownElement.style.opacity = 0;
+
+
+    event.preventDefault();
+
 }
