@@ -5049,6 +5049,10 @@ li {
   ul div {
     width: 100vh;
   }
+
+  body {
+    overflow-x: hidden;
+  }
 }
 body {
   background-color: var(--background-color);
