@@ -5032,6 +5032,24 @@
   }
 }
 /*# sourceMappingURL=bootstrap-grid.css.map */
+@media (max-width: 520px) {
+  p,
+li {
+    font-size: 1.5rem;
+  }
+
+  ul {
+    height: 100%;
+  }
+
+  ul li {
+    font-size: 2rem;
+  }
+
+  ul div {
+    width: 100vh;
+  }
+}
 body {
   background-color: var(--background-color);
   color: var(--text-color);
@@ -5069,20 +5087,8 @@ nav a {
   justify-content: center;
   margin: 0em 1em 1em 1em !important;
 }
-nav a::after {
-  content: "";
-  position: absolute;
-  width: 20rem;
-  height: 2px;
-  bottom: 0;
-  left: 0;
-  background-color: blue;
-  transform-origin: bottom right;
-  transition: transform 0.25s ease-out;
-  transform: scaleX(0);
-}
-nav a:hover::after {
-  transform: scaleX(1);
+nav a:hover {
+  text-decoration: underline;
 }
 
 a:hover::after {
@@ -5099,7 +5105,7 @@ html[data-theme=light] {
 html[data-theme=dark] {
   --background-color: #212a2e;
   --secondary-color: rgb(37, 37, 46);
-  --text-color: #F7F8F8;
+  --text-color: #f7f8f8;
   --link-color: #828fff;
 }
 
@@ -5131,7 +5137,8 @@ html[data-theme=dark] {
   margin-bottom: 2rem;
 }
 
-h1, h2 {
+h1,
+h2 {
   text-align: center;
 }
 
@@ -5147,7 +5154,8 @@ li {
   width: 5rem;
 }
 
-p, li {
+p,
+li {
   font-size: 2.9vmin;
   text-size-adjust: auto;
 }
@@ -5162,24 +5170,6 @@ p, li {
   padding: 2rem;
 }
 
-@media (max-width: 520px) {
-  p,
-li {
-    font-size: 1.5rem;
-  }
-
-  ul {
-    height: 100%;
-  }
-
-  ul li {
-    font-size: 2rem;
-  }
-
-  ul div {
-    width: 100vh;
-  }
-}
 .dwnldbtn {
   text-align: center;
   background-color: black;
@@ -5239,7 +5229,7 @@ li {
 
 .modal-body {
   font-size: 2rem;
-  background-color: #F7F8F8;
+  background-color: #f7f8f8;
   justify-content: center;
   -webkit-animation: animatetop 0.4s;
   position: absolute;
@@ -5338,7 +5328,8 @@ input:checked + label:after {
   background: linear-gradient(180deg, #777, #3a3a3a);
 }
 
-.toggle-button-label, .toggle-button-label:after {
+.toggle-button-label,
+.toggle-button-label:after {
   transition: 0.3s;
 }
 
@@ -5410,24 +5401,13 @@ input:checked + .toggle-button-label svg.moon {
 
 .dropdown-menu {
   position: absolute;
-  top: calc(100% + .25rem);
+  top: calc(100% + 0.25rem);
   background-color: var(--background-color);
   padding: 0.75rem;
   border-radius: 1.25rem;
   box-shadow: 0 2px 15px 0 rgba(0, 0, 0, 0.1);
   opacity: 0;
   transition: opacity 0.2s ease-in;
-}
-.dropdown-menu ul {
-  padding: 0;
-}
-.dropdown-menu ul > li {
-  background: linear-gradient(#1a64b9 0 0) var(--p, 0)/var(--p, 0) no-repeat;
-  transition: 0.4s, background-position 0s;
-}
-.dropdown-menu ul > li:hover {
-  --p: 100%;
-  color: #fff;
 }
 
 /*# sourceMappingURL=style.css.map */
