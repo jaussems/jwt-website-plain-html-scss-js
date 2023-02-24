@@ -5,6 +5,11 @@
   <title>Jannes Aussems Website</title>
   <script src="javascript/javascript.js"></script>
   <link rel="stylesheet" href="styles/css/style.css">
+  <meta charset="UTF-8">
+  <meta name="keywords" content="HTML, CSS, JavaScript, React, Angular, SASS ">
+  <meta name="description" content="A website about Jannes Aussems">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 
 </head>
 
@@ -21,6 +26,7 @@
         <li>
           <a href="#portfolio">Portfolio</a>
         </li>
+
         <li class="contact-button">
           <a>
             <button onclick="toggleModal(event)">
@@ -55,7 +61,26 @@
             </svg>
           </label>
         </li>
+        <div class="dropdown">
+          <button onclick="toggleDropdownMenu(event)"><img class=" dropdown-icon"
+              src='./shared/icons/menu.svg' /></button>
+          <div class="dropdown-menu">
+            <ul>
+              <li>
+                <a href="#story">My Story</a>
+              </li>
+              <li>
+                <a href="#skills">Skills</a>
+              </li>
+
+              <li>
+                <a href="#portfolio">Portfolio</a>
+              </li>
+            </ul>
+          </div>
+        </div>
       </ul>
+
     </nav>
   </header>
   <div class="container">
