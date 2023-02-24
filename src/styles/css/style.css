@@ -5070,6 +5070,11 @@
     overflow-x: hidden;
   }
 }
+@media (width >= 520px) {
+  .dropdown {
+    display: none;
+  }
+}
 body {
   background-color: var(--background-color);
   color: var(--text-color);

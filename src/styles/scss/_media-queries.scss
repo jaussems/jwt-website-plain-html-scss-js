@@ -7,7 +7,6 @@
     display: block;
     margin-left: -2rem;
   }
-
   .dropdown-menu {
     width: 100%;
   }
@@ -34,5 +33,11 @@
 
   body {
     overflow-x: hidden;
+  }
+}
+
+@media (width >= 520px) {
+  .dropdown {
+    display: none;
   }
 }
