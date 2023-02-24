@@ -5033,9 +5033,16 @@
 }
 /*# sourceMappingURL=bootstrap-grid.css.map */
 @media (max-width: 520px) {
-  p,
-li {
+  p {
     font-size: 1.5rem;
+  }
+
+  .dropdown {
+    display: block;
+  }
+
+  nav > ul > li {
+    display: none;
   }
 
   ul {
