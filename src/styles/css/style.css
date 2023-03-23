@@ -5279,6 +5279,7 @@ li {
 }
 .contact-button p {
   color: var(--text-color);
+  margin: 0;
 }
 
 .body.modal-open {
