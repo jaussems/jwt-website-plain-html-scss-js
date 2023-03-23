@@ -117,24 +117,32 @@ html[data-theme="dark"] {
   &--card {
     padding: 1.5rem;
     border-radius: 16px;
-    //background: linear-gradient(85deg, #fffefe, #c9c4c4);
     background: rgba(119, 102, 102, 0.116);
     color: var(--text-color);
     display: flex;
     flex-direction: column;
     transition: 0.2s;
     margin: 0;
+    width: 10rem;
+    height: 10rem;
+    margin-bottom: 4rem;
 
-    a {
-      text-align: center;
+    p {
       text-decoration: none;
-      color: var(--text-color);
+      text-align: center;
+      display: contents;
     }
-
-    a::hover {
-      font-size: 1.5rem;
-      text-decoration: underline;
-    }
+  }
+  &--card:hover {
+    margin-top: -1rem;
+  }
+  &--link {
+    text-decoration: none;
+    color: black;
+    text-decoration-line: none;
+  }
+  &--link:hover {
+    text-decoration: underline;
   }
 }
 
