@@ -33,11 +33,14 @@ nav {
   top: 0;
   background-color: rgba(255, 255, 255, 0.116);
   z-index: 3 !important;
+
   a {
     text-decoration: none;
     color: var(--text-color);
-    justify-content: center;
-    margin: 0em 1em 1em 1em !important;
+  }
+
+  ul {
+    gap: 2.5rem;
   }
 
   a:hover {
@@ -117,8 +120,8 @@ h2 {
 li {
   display: flex;
   list-style: none;
-  align-items: center;
-  justify-content: center;
+  // align-items: center;
+  // justify-content: center;
 }
 .icon {
   height: 5rem;
@@ -222,6 +225,10 @@ li {
 .contact-button {
   button {
     cursor: pointer;
+  }
+
+  button:hover {
+    text-decoration: underline;
   }
   p {
     color: var(--text-color);

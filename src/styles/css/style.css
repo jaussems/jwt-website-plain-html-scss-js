@@ -5109,8 +5109,9 @@ nav {
 nav a {
   text-decoration: none;
   color: var(--text-color);
-  justify-content: center;
-  margin: 0em 1em 1em 1em !important;
+}
+nav ul {
+  gap: 2.5rem;
 }
 nav a:hover {
   text-decoration: underline;
@@ -5170,8 +5171,6 @@ h2 {
 li {
   display: flex;
   list-style: none;
-  align-items: center;
-  justify-content: center;
 }
 
 .icon {
@@ -5274,6 +5273,9 @@ li {
 
 .contact-button button {
   cursor: pointer;
+}
+.contact-button button:hover {
+  text-decoration: underline;
 }
 .contact-button p {
   color: var(--text-color);
