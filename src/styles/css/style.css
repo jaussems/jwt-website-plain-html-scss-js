@@ -5099,6 +5099,19 @@ body {
   font-family: "Quicksand Medium", sans-serif;
   z-index: 0 !important;
   scroll-behavior: smooth;
+  scrollbar-color: var(--text-color) var(--secondary-color);
+}
+body::-webkit-scrollbar {
+  width: 0.75rem;
+  height: 0.75rem;
+}
+body::-webkit-scrollbar-thumb {
+  background: var(--text-color);
+  border-radius: 0.75rem;
+  box-shadow: 1rem solid black;
+}
+body::-webkit-scrollbar-track {
+  background: var(--secondary-color);
 }
 
 a {

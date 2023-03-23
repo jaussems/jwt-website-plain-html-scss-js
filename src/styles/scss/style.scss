@@ -3,6 +3,7 @@
 @import "fonts";
 @import "grid";
 @import "media-queries";
+@import "mixins";
 body {
   background-color: var(--background-color);
   color: var(--text-color);
@@ -10,6 +11,7 @@ body {
   font-family: "Quicksand Medium", sans-serif;
   z-index: 0 !important;
   scroll-behavior: smooth;
+  @include scrollbar;
 }
 
 a {
