@@ -223,17 +223,31 @@ li {
 }
 
 .contact-button {
+  display: block;
+
   button {
     cursor: pointer;
+    margin: 0;
   }
 
   button:hover {
     text-decoration: underline;
+    text-decoration-color: var(--text-color);
   }
   p {
-    color: var(--text-color);
     margin: 0;
+    padding: 0;
+    font-size: 2.9vmin;
+    text-size-adjust: auto;
+    color: var(--text-color);
   }
+}
+
+.li-dark-mode {
+  display: inline;
+  bottom: 1.5rem;
+  right: 1.5rem;
+  position: relative;
 }
 
 .body.modal-open {
