@@ -105,10 +105,36 @@ html[data-theme="dark"] {
 
 .portfolio {
   text-align: center;
-
+  &__inner {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+  }
   img {
     height: 4rem;
     margin-bottom: 2rem;
+  }
+  &--card {
+    padding: 1.5rem;
+    border-radius: 16px;
+    //background: linear-gradient(85deg, #fffefe, #c9c4c4);
+    background: rgba(119, 102, 102, 0.116);
+    color: var(--text-color);
+    display: flex;
+    flex-direction: column;
+    transition: 0.2s;
+    margin: 0;
+
+    a {
+      text-align: center;
+      text-decoration: none;
+      color: var(--text-color);
+    }
+
+    a::hover {
+      font-size: 1.5rem;
+      text-decoration: underline;
+    }
   }
 }
 
@@ -120,8 +146,6 @@ h2 {
 li {
   display: flex;
   list-style: none;
-  // align-items: center;
-  // justify-content: center;
 }
 .icon {
   height: 5rem;
@@ -196,9 +220,21 @@ li {
   }
 
   input {
-    width: 10rem;
     align-self: center;
     margin: 2rem 0 2rem;
+    width: 50%;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-shadow: inset 0 1px 3px #ddd;
+    border-radius: 2rem;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 12px;
+    padding-bottom: 12px;
   }
 }
 .modal-body {
