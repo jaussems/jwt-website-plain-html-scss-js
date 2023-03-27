@@ -21,6 +21,24 @@ const darkModeToggle = () => {
 
 }
 
+function addObserver(el) {
+    let observer = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('active');
+                observer.unobserve(enetry.target);
+            }
+        })
+    })
+    observer.observe(el);
+}
+
+function scrollTrigger(selector) {
+    let element = document.querySelector(selector);
+    console.log(element);
+    addObserver(element);
+}
+
 
 const getAge = birthDate => Math.floor((new Date() - new Date(birthDate).getTime()) / 3.15576e+10)
 
@@ -64,3 +82,9 @@ const toggleDropdownMenu = (event) => {
     event.preventDefault();
 
 }
+
+
+// scrollTrigger('skills-inner');
+console.log(document.querySelector('.skills-inner'));
+
+scrollTrigger('.skills-inner');

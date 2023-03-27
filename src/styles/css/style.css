@@ -5378,6 +5378,28 @@ li {
   position: fixed;
 }
 
+[data-animation-type=show].is-ready {
+  opacity: 0;
+}
+
+.p-io-animation__show {
+  animation: show 0.5s;
+  animation-fill-mode: both;
+}
+
+@keyframes show {
+  0% {
+    opacity: 0;
+    transform: scale(0.3);
+  }
+  75% {
+    transform: scale(1.1);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
 /* Add Animation */
 @-webkit-keyframes animatetop {
   from {
