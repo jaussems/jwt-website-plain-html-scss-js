@@ -25,7 +25,7 @@ function addObserver(el) {
     let observer = new IntersectionObserver((entries, observer) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
-                entry.target.classList.add('active');
+                entry.target.classList.add('p-io-animation__show');
                 observer.unobserve(enetry.target);
             }
         })
