@@ -21,22 +21,35 @@ const darkModeToggle = () => {
 
 }
 
-function addObserver(el) {
+function addObserver(el, options) {
     let observer = new IntersectionObserver((entries, observer) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
-                entry.target.classList.add('p-io-animation__show');
-                observer.unobserve(enetry.target);
+                entry.target.classList.add('p-io-animation__show')
+                observer.unobserve(entry.target)
             }
         })
-    })
-    observer.observe(el);
+    }, options) // Passing the options object to the observer
+    observer.observe(el)
 }
 
-function scrollTrigger(selector) {
+// function addObserver(el, options) {
+//     let observer = new IntersectionObserver((entries, observer) => {
+//         entries.forEach(entry => {
+//             if (entry.isIntersecting) {
+//                 entry.target.classList.add('p-io-animation__show');
+//                 observer.unobserve(enetry.target);
+//             }
+//         })
+//     })
+//     observer.observe(el);
+// }
+
+
+function scrollTrigger(selector, options = {}) {
     let element = document.querySelector(selector);
     console.log(element);
-    addObserver(element);
+    addObserver(element, options);
 }
 
 
