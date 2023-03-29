@@ -5064,14 +5064,20 @@
 
   ul {
     height: 100%;
+    width: 100%;
   }
 
-  ul li {
-    font-size: 2rem;
+  .skills ul {
+    width: 100%;
+    justify-content: center;
   }
 
-  ul div {
+  .skills li {
     width: 100vh;
+  }
+
+  .skills p {
+    font-size: 2rem;
   }
 
   body {
@@ -5092,14 +5098,10 @@
     display: none;
   }
 }
-@media (min-width: 520px) and (max-width: 700px) {
-  .skills > div > li {
+@media (min-width: 520px) and (max-width: 767px) {
+  .skills li {
     display: flex;
-    width: 100vh;
-  }
-
-  * {
-    background: red;
+    align-items: center;
   }
 }
 body {
