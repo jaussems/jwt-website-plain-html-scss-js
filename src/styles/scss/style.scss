@@ -12,6 +12,8 @@ body {
   z-index: 0 !important;
   scroll-behavior: smooth;
   @include scrollbar;
+  margin: 0;
+  padding: 0;
 }
 
 a {
