@@ -3,12 +3,13 @@
 
 <head>
   <title>Jannes Aussems Website</title>
-  <script src="javascript/javascript.js"></script>
+
   <link rel="stylesheet" href="styles/css/style.css">
   <meta charset="UTF-8">
   <meta name="keywords" content="HTML, CSS, JavaScript, React, Angular, SASS ">
   <meta name="description" content="A website about Jannes Aussems">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
 
 
 </head>
@@ -26,16 +27,14 @@
         <li>
           <a href="#portfolio">Portfolio</a>
         </li>
-
         <li class="contact-button">
-          <a>
-            <button onclick="toggleModal(event)">
-              <p>Contact</p>
-            </button>
-          </a>
+
+          <button onclick="toggleModal(event)">
+            <p>Contact</p>
+          </button>
 
         </li>
-        <li class="mb-auto ">
+        <li class="ms-auto  li-dark-mode   ">
           <input type="checkbox" id="darkmode-toggle" class="hide-input " onchange="darkModeToggle()" />
           <label class="toggle-button-label" for="darkmode-toggle">
             <svg class="sun" width="2rem" height="2rem" viewBox="0 0 512 512" version="1.1"
@@ -83,7 +82,7 @@
 
     </nav>
   </header>
-  <div class="container">
+  <div class="container container-fluid">
     <div class="contact-modal">
       <div class="contact-modal_body">
         <div class=" d-flex flex-column ">
@@ -117,7 +116,9 @@
               side my peers. I know certain technologies you can see listed below.</p>
             <p>Although I can call myself a developer now,there still much to learn. My mission is continuous learning,
               I keep learning, I keep growing, a little bit better each day is still a little bit!</p>
-            <div class="d-flex justify-content-between align-items-center">
+
+            <div class="d-flex justify-content-between align-items-center  ">
+
               <a href="https://www.linkedin.com/in/jannesaussems/">
                 <img class="icon" alt="LinkedIn"
                   src="https://cdn.jsdelivr.net/npm/simple-icons@v3/icons/linkedin.svg" />
@@ -130,7 +131,9 @@
               </a>
             </div>
 
+
           </div>
+
         </div>
         <div class="col-lg-5  align-image">
           <img class="intro__image" src="./shared/images/jannes.jpeg" />
@@ -142,52 +145,56 @@
         <div id="skills" class="skills">
           <h1>My Skills</h1>
           <div class="col-lg-12 col-md-12  col-12 ">
-            <ul class="d-flex flex-xs-column  flex-wrap justify-content-sm-evenly  justify-content-center ">
-              <div class="d-flex align-items-sm-center  pe-3   ">
-                <img class="icon" src="./shared/icons/skills-icons/html-icon.png" />
-                <li>HTML </li>
-              </div>
-              <div class="d-flex  align-items-sm-center pe-3 ">
-                <img class="icon" src="./shared/icons/skills-icons/css-icon.png" />
-                <li>CSS </li>
-              </div>
-              <div class="d-flex  align-items-sm-center pe-3 ">
-                <img class="icon" src="./shared/icons/skills-icons/sass-icon.svg" />
-                <li>SASS </li>
-              </div>
-              <div class="d-flex  align-items-sm-center pe-3 ">
-                <img class="icon" src="./shared/icons/skills-icons/javascript-icon.png" />
-                <li>Javascript </li>
-              </div>
-              <div class="d-flex  align-items-sm-center pe-3 ">
-                <img class="icon" src="./shared/icons/skills-icons/typescript-icon.png" />
-                <li>Typescript </li>
-              </div>
-              <div class="d-flex  align-items-sm-center pe-3 ">
-                <img class="icon" src="./shared/icons/skills-icons/angular-icon.png" />
-                <li>Angular </li>
-              </div>
-              <div class="d-flex  align-items-sm-center  pe-3">
-                <img class="icon" src="./shared/icons/skills-icons/react-icon.png" />
-                <li>React </li>
-              </div>
-              <div class="d-flex  align-items-sm-center pe-3 ">
-                <img class="icon" src="./shared/icons/skills-icons/redux.svg" />
-                <li>Redux </li>
-              </div>
-              <div class="d-flex  align-items-sm-center pe-3 ">
-                <img class="icon" src="./shared/icons/skills-icons/sequelize-icon.png" />
-                <li>Sequelize </li>
-              </div>
-              <div class="d-flex  align-items-sm-center  pe-3">
-                <img class="icon" src="./shared/icons/skills-icons/express-icon.png" />
-                <li>Express </li>
-              </div>
-              <div class="d-flex  align-items-sm-center pe-3 ">
-                <img class="icon" src="./shared/icons/skills-icons/nodeJs-dark.svg" />
-                <li>Node </li>
-              </div>
-            </ul>
+            <div class="skills-inner is-ready">
+              <!-- <ul class="d-flex flex-xs-column  flex-wrap justify-content-lg-evenly  justify-content-center "> -->
+              <ul class="skills-align ">
+                <li class="d-flex align-items-sm-center  pe-3   ">
+                  <img class="icon" src="./shared/icons/skills-icons/html-icon.png" />
+                  <p>HTML </p>
+                </li>
+                <li class="d-flex  align-items-sm-center pe-3 ">
+                  <img class="icon" src="./shared/icons/skills-icons/css-icon.png" />
+                  <p>CSS </p>
+                </li>
+                <li class="d-flex  align-items-sm-center pe-3 ">
+                  <img class="icon" src="./shared/icons/skills-icons/sass-icon.svg" />
+                  <p>SASS </p>
+                </li>
+                <li class="d-flex  align-items-sm-center pe-3 ">
+                  <img class="icon" src="./shared/icons/skills-icons/javascript-icon.png" />
+                  <p>Javascript </p>
+                </li>
+                <li class="d-flex  align-items-sm-center pe-3 ">
+                  <img class="icon" src="./shared/icons/skills-icons/typescript-icon.png" />
+                  <p>Typescript </p>
+                </li>
+                <li class="d-flex  align-items-sm-center pe-3 ">
+                  <img class="icon" src="./shared/icons/skills-icons/angular-icon.png" />
+                  <p>Angular </p>
+                </li>
+                <li class="d-flex  align-items-sm-center  pe-3">
+                  <img class="icon" src="./shared/icons/skills-icons/react-icon.png" />
+                  <p>React </p>
+                </li>
+                <li class="d-flex  align-items-sm-center pe-3 ">
+                  <img class="icon" src="./shared/icons/skills-icons/redux.svg" />
+                  <p>Redux </p>
+                </li>
+                <li class="d-flex  align-items-sm-center pe-3 ">
+                  <img class="icon" src="./shared/icons/skills-icons/sequelize-icon.png" />
+                  <p>Sequelize
+                </li>
+                </li>
+                <li class="d-flex  align-items-sm-center  pe-3">
+                  <img class="icon" src="./shared/icons/skills-icons/express-icon.png" />
+                  <p>Express </p>
+                </li>
+                <li class="d-flex  align-items-sm-center pe-3 ">
+                  <img class="icon" src="./shared/icons/skills-icons/nodeJs-dark.svg" />
+                  <p>Node </p>
+                </li>
+              </ul>
+            </div>
 
 
           </div>
@@ -196,17 +203,19 @@
       </div>
       <div id="portfolio" class=" portfolio">
         <h1>Here are some of my portfolio projects</h1>
-        <div class="col-12 ">
-          <div class=" d-flex flex-column">
-            <h2>Portfolio site 1 </h2>
-            <img class="portfolio-icon" src="./shared/icons/icons8-bitcoin.svg" />
-            <a href="https://see-crypto-app.netlify.app/">See Crypto App</a>
-          </div>
-          <div class="d-flex flex-column">
-            <h2>Portfolio site 2</h2>
-            <img class="portfolio-icon" src="./shared/icons/icons8-bitcoin.svg" />
-            <a href="https://walking-tour.netlify.app/">Walking tour Site</a>
-          </div>
+        <div class="portfolio__inner">
+          <a class="portfolio--link" href="https://see-crypto-app.netlify.app/">
+            <article class="portfolio--card">
+              <img class="portfolio-icon" src="./shared/icons/icons8-bitcoin.svg" />
+              <p>Crypto App</p>
+            </article>
+          </a>
+          <a class="portfolio--link" href="https://walking-tour.netlify.app/">
+            <article class="portfolio--card">
+              <img class="portfolio-icon" src="./shared/icons/icons8-bitcoin.svg" />
+              <p>Walking tour Site</p>
+            </article>
+          </a>
         </div>
       </div>
 
@@ -217,6 +226,6 @@
 
 </body>
 
-
+<script src="javascript/javascript.js"></script>
 
 </html>

@@ -1,8 +1,36 @@
 @mixin icon($image) {
-    background: {
-        image:url($image);
-        repeat: no-repeat;
-        height: 5rem;
-        width: 5rem;
-    }
+  background: {
+    image: url($image);
+    repeat: no-repeat;
+    height: 5rem;
+    width: 5rem;
+  }
+}
+
+@mixin scrollbar(
+  $size: 0.75rem,
+  $foreground-color: var(--text-color),
+  $background-color: var(--secondary-color)
+) {
+  // For Chrome & Safari
+  &::-webkit-scrollbar {
+    width: $size;
+    height: $size;
+  }
+  &::-webkit-scrollbar-thumb {
+    background: $foreground-color;
+    border-radius: 0.75rem;
+    box-shadow: 1rem solid black;
+  }
+  &::-webkit-scrollbar-track {
+    background: $background-color;
+  }
+
+  // Standard version (Firefox only for now)
+  scrollbar-color: $foreground-color $background-color;
+}
+
+@mixin flex-column {
+  display: flex;
+  flex-direction: column;
 }

@@ -11,6 +11,14 @@
     width: 100%;
   }
 
+  .contact-button {
+    display: none !important;
+  }
+
+  .li-dark-mode {
+    display: none !important;
+  }
+
   .intro__text > p {
     font-size: 1.5rem;
   }
@@ -21,23 +29,92 @@
 
   ul {
     height: 100%;
+    width: 100%;
   }
 
-  ul li {
-    font-size: 2rem;
+  .skills li {
+    align-items: center;
+    display: block;
+    //justify-content: center;
   }
 
-  ul div {
+  ul li a {
+    font-size: 2.25rem;
+  }
+
+  // .dwnldbtn {
+  //   display: none;
+  // }
+  // .skills ul {
+  //   width: 100%;
+  // }
+
+  // .skills li {
+  //   flex-direction: column;
+  //   width: 100vh;
+  // }
+
+  // .skills p {
+  //   font-size: 2rem;
+  //   transform: 1s;
+  // }
+
+  .skills ul {
+    width: 100%;
+    justify-content: center;
+  }
+  .skills li {
+    //flex-direction: column;
     width: 100vh;
+  }
+
+  .skills p {
+    font-size: 2rem;
   }
 
   body {
     overflow-x: hidden;
+  }
+
+  .portfolio__inner {
+    display: flex;
+    flex-direction: column;
+  }
+
+  article {
+    width: 100%;
   }
 }
 
 @media (width >= 520px) {
   .dropdown {
     display: none;
+  }
+}
+
+// @media (min-width: )
+
+@media (min-width: 520px) and (max-width: 767px) {
+  .skills li {
+    display: flex;
+    align-items: center;
+  }
+  .skills-align {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: max-content;
+    margin: 0 auto;
+    columns: 2 15rem;
+    //height: 100%;
+  }
+
+  .skills-align li {
+    max-width: max-content;
+    display: inline;
+    p {
+      font-size: 2rem;
+    }
   }
 }

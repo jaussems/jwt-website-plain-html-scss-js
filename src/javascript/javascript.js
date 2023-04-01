@@ -21,6 +21,37 @@ const darkModeToggle = () => {
 
 }
 
+function addObserver(el, options) {
+    let observer = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('p-io-animation__show')
+                observer.unobserve(entry.target)
+            }
+        })
+    }, options) // Passing the options object to the observer
+    observer.observe(el)
+}
+
+// function addObserver(el, options) {
+//     let observer = new IntersectionObserver((entries, observer) => {
+//         entries.forEach(entry => {
+//             if (entry.isIntersecting) {
+//                 entry.target.classList.add('p-io-animation__show');
+//                 observer.unobserve(enetry.target);
+//             }
+//         })
+//     })
+//     observer.observe(el);
+// }
+
+
+function scrollTrigger(selector, options = {}) {
+    let element = document.querySelector(selector);
+    console.log(element);
+    addObserver(element, options);
+}
+
 
 const getAge = birthDate => Math.floor((new Date() - new Date(birthDate).getTime()) / 3.15576e+10)
 
@@ -64,3 +95,9 @@ const toggleDropdownMenu = (event) => {
     event.preventDefault();
 
 }
+
+
+// scrollTrigger('skills-inner');
+console.log(document.querySelector('.skills-inner'));
+
+scrollTrigger('.skills-inner');
