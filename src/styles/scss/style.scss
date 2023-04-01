@@ -107,6 +107,12 @@ html[data-theme="dark"] {
   display: row;
 }
 
+.skills-align {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
 .portfolio {
   text-align: center;
   &__inner {

@@ -29,3 +29,8 @@
   // Standard version (Firefox only for now)
   scrollbar-color: $foreground-color $background-color;
 }
+
+@mixin flex-column {
+  display: flex;
+  flex-direction: column;
+}

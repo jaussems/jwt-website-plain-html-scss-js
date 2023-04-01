@@ -34,6 +34,7 @@
 
   .skills li {
     align-items: center;
+    display: block;
     //justify-content: center;
   }
 
@@ -91,9 +92,29 @@
   }
 }
 
+// @media (min-width: )
+
 @media (min-width: 520px) and (max-width: 767px) {
   .skills li {
     display: flex;
     align-items: center;
+  }
+  .skills-align {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: max-content;
+    margin: 0 auto;
+    columns: 2 15rem;
+    //height: 100%;
+  }
+
+  .skills-align li {
+    max-width: max-content;
+    display: inline;
+    p {
+      font-size: 2rem;
+    }
   }
 }
