@@ -100,6 +100,11 @@ html[data-theme="dark"] {
     object-fit: contain;
     max-height: 25rem;
     border-radius: 99px;
+
+    @include responsive(533px) {
+      height: 70%;
+      border-radius: 20rem;
+    }
   }
 }
 
@@ -107,12 +112,26 @@ html[data-theme="dark"] {
   display: row;
 }
 
+.reference-links {
+  @include flex-row;
+  justify-content: space-between;
+  align-items: center;
+  @include responsive(533px) {
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+    justify-content: space-between;
+  }
+}
 .skills-align {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
 }
-
+.story {
+  &_text {
+  }
+}
 .portfolio {
   text-align: center;
   &__inner {
@@ -153,6 +172,18 @@ html[data-theme="dark"] {
   }
   &--link:hover {
     text-decoration: underline;
+  }
+
+  @include responsive(533px) {
+    width: 100%;
+    &--card {
+      flex: 0 0 100%;
+      margin: 2rem;
+    }
+
+    &__inner {
+      align-items: center;
+    }
   }
 }
 

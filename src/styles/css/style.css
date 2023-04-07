@@ -5221,9 +5221,30 @@ html[data-theme=dark] {
   max-height: 25rem;
   border-radius: 99px;
 }
+@media (max-width: 533px) {
+  .intro__image {
+    height: 70%;
+    border-radius: 20rem;
+  }
+}
 
 .skills {
   display: row;
+}
+
+.reference-links {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+@media (max-width: 533px) {
+  .reference-links {
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+    justify-content: space-between;
+  }
 }
 
 .skills-align {
@@ -5272,6 +5293,18 @@ html[data-theme=dark] {
 }
 .portfolio--link:hover {
   text-decoration: underline;
+}
+@media (max-width: 533px) {
+  .portfolio {
+    width: 100%;
+  }
+  .portfolio--card {
+    flex: 0 0 100%;
+    margin: 2rem;
+  }
+  .portfolio__inner {
+    align-items: center;
+  }
 }
 
 h1,
