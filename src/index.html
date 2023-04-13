@@ -227,15 +227,17 @@
 
 
     <button onclick="toggleModal(event)">
-      <p>Close X</p>
+      <p class="close_button">Close <span class="red"> X </span></p>
     </button>
 
     <h1>Contact Me</h1>
-    <label>Enter your email</label>
-    <input />
-    <label>Enter your message</label>
-    <input />
-
+    <form id="modal_form">
+      <label>Enter your email</label>
+      <input />
+      <label>Enter your message</label>
+      <textarea id="modal_message"></textarea>
+      <button class="dwnldbtn">Submit</button>
+    </form>
 
   </div>
 

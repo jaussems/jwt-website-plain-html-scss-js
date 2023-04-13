@@ -213,7 +213,7 @@ li {
 
 .dwnldbtn {
   text-align: center;
-  background-color: rgb(0, 0, 0);
+  background: rgb(0, 0, 0);
   border: none;
   color: white;
   padding: 12px 30px;
@@ -222,9 +222,9 @@ li {
 }
 
 .dwnldbtn:hover {
-  background-color: white;
+  background: white;
   color: black;
-  text-decoration: underline;
+  transition: background 0.2s ease-in;
 }
 
 #modal {
@@ -238,21 +238,49 @@ li {
   transform: scale(1.5); /* prefix me */
   opacity: 0;
   pointer-events: none;
+  align-items: center;
+  @include flex-column;
+  &_form {
+    @include flex-column;
+    width: 80%;
+    gap: 1rem;
+    padding: 2rem;
+  }
+  &_message {
+    height: 200px;
+    font-size: 2vh;
+    margin-bottom: 3rem;
+  }
+
   @include flex-column;
   gap: 2rem;
   input {
-    width: 80%;
-    margin: 0 auto;
+    font-size: 2vh;
+    background-image: linear-gradient(grey);
     padding: 1rem;
     margin-bottom: 1rem;
   }
+
+  input:focus {
+    border-color: var(--text-color);
+    box-shadow: 5px 3px 5px var(--text-color);
+    transition: box-shadow 0.4s ease-in;
+  }
+}
+textarea:hover {
+  border-color: var(--text-color);
+  box-shadow: 5px 3px 5px var(--text-color);
+  transition: box-shadow 0.4s ease-in;
+}
+textarea:focus {
+  border-color: var(--text-color);
+  box-shadow: 5px 3px 5px var(--text-color);
+  transition: box-shadow 0.4s ease-in;
 }
 
 .dialogIsOpen #page-wrap {
-  /* Blur and de-color */
   -webkit-filter: blur(5px) grayscale(50%);
 
-  /* Recede */
   -webkit-transform: scale(0.9);
 }
 
@@ -272,6 +300,13 @@ li {
 
 .contact-button {
   cursor: pointer;
+}
+
+.close_button {
+  cursor: pointer;
+}
+.red {
+  color: red;
 }
 
 .li-dark-mode {
