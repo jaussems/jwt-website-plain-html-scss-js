@@ -239,6 +239,7 @@ li {
   opacity: 0;
   pointer-events: none;
   align-items: center;
+  color: var(--text-color);
   @include flex-column;
   &_form {
     @include flex-column;
@@ -304,6 +305,7 @@ textarea:focus {
 
 .close_button {
   cursor: pointer;
+  color: var(--text-color);
 }
 .red {
   color: red;
