@@ -15,114 +15,86 @@
 </head>
 
 <body>
-  <header>
-    <nav class="col-lg-12 bg-color  ">
-      <ul class=" d-flex h-100  ">
-        <li>
-          <a href="#story" class="link_hover">My Story</a>
-        </li>
-        <li>
-          <a href="#skills" class="link_hover">Skills</a>
-        </li>
-        <li>
-          <a href="#portfolio" class="link_hover">Portfolio</a>
-        </li>
-        <li>
+
+  <div class="container container-fluid" id="page-wrap">
+    <header>
+      <nav class="col-lg-12 bg-color  ">
+        <ul class=" d-flex h-100  ">
+          <li>
+            <a href="#story" class="link_hover">My Story</a>
+          </li>
+          <li>
+            <a href="#skills" class="link_hover">Skills</a>
+          </li>
+          <li>
+            <a href="#portfolio" class="link_hover">Portfolio</a>
+          </li>
+          <li>
 
 
-          <a class="link_hover contact-button" onclick="toggleModal(event)">Contact</a>
+            <a class="link_hover contact-button" onclick="toggleModal(event)">Contact</a>
 
 
-        </li>
-        <li class="ms-auto  li-dark-mode   ">
-          <input type="checkbox" id="darkmode-toggle" class="hide-input " onchange="darkModeToggle()" />
-          <label class="toggle-button-label" for="darkmode-toggle">
-            <svg class="sun" width="2rem" height="2rem" viewBox="0 0 512 512" version="1.1"
-              xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" fill="#000000">
-              <g id="SVGRepo_bgCarrier" stroke-width="0" />
-              <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round" />
-              <g id="SVGRepo_iconCarrier">
-                <title>sun</title>
-                <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-                  <g id="Combined-Shape" fill="#ffffff" transform="translate(21.333333, 21.333333)">
-                    <path
-                      d="M256,384 L256,469.333333 L213.333333,469.333333 L213.333333,384 L256,384 Z M355.346224,325.176335 L415.686003,385.516113 L385.516113,415.686003 L325.176335,355.346224 L355.346224,325.176335 Z M113.987109,325.176335 L144.156999,355.346224 L83.81722,415.686003 L53.6473307,385.516113 L113.987109,325.176335 Z M234.666667,118.01971 C299.089002,118.01971 351.313623,170.244331 351.313623,234.666667 C351.313623,299.089002 299.089002,351.314049 234.666667,351.314049 C203.711846,351.372867 174.007802,339.102338 152.119399,317.213934 C130.230995,295.325531 117.960466,265.621487 118.019285,234.666667 C118.019285,170.244331 170.244331,118.01971 234.666667,118.01971 Z M234.666667,160.686377 C193.808416,160.686377 160.685951,193.808546 160.685951,234.748031 C160.648688,254.358867 168.422443,273.1772 182.289288,287.044045 C196.156133,300.91089 214.974466,308.684645 234.666667,308.647305 C275.524788,308.647305 308.646957,275.524917 308.646957,234.666667 C308.646957,193.808481 275.524853,160.686377 234.666667,160.686377 Z M469.333333,213.333333 L469.333333,256 L384,256 L384,213.333333 L469.333333,213.333333 Z M85.3333333,213.333333 L85.3333333,256 L3.55271368e-15,256 L3.55271368e-15,213.333333 L85.3333333,213.333333 Z M83.81722,53.6473307 L144.156999,113.987109 L113.987109,144.156999 L53.6473307,83.81722 L83.81722,53.6473307 Z M385.516113,53.6473307 L415.686003,83.81722 L355.346224,144.156999 L325.176335,113.987109 L385.516113,53.6473307 Z M256,9.68506364e-12 L256,85.3333333 L213.333333,85.3333333 L213.333333,9.6772259e-12 L256,9.68506364e-12 Z">
-                    </path>
+          </li>
+          <li class="ms-auto  li-dark-mode   ">
+            <input type="checkbox" id="darkmode-toggle" class="hide-input " onchange="darkModeToggle()" />
+            <label class="toggle-button-label" for="darkmode-toggle">
+              <svg class="sun" width="2rem" height="2rem" viewBox="0 0 512 512" version="1.1"
+                xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" fill="#000000">
+                <g id="SVGRepo_bgCarrier" stroke-width="0" />
+                <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round" />
+                <g id="SVGRepo_iconCarrier">
+                  <title>sun</title>
+                  <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                    <g id="Combined-Shape" fill="#ffffff" transform="translate(21.333333, 21.333333)">
+                      <path
+                        d="M256,384 L256,469.333333 L213.333333,469.333333 L213.333333,384 L256,384 Z M355.346224,325.176335 L415.686003,385.516113 L385.516113,415.686003 L325.176335,355.346224 L355.346224,325.176335 Z M113.987109,325.176335 L144.156999,355.346224 L83.81722,415.686003 L53.6473307,385.516113 L113.987109,325.176335 Z M234.666667,118.01971 C299.089002,118.01971 351.313623,170.244331 351.313623,234.666667 C351.313623,299.089002 299.089002,351.314049 234.666667,351.314049 C203.711846,351.372867 174.007802,339.102338 152.119399,317.213934 C130.230995,295.325531 117.960466,265.621487 118.019285,234.666667 C118.019285,170.244331 170.244331,118.01971 234.666667,118.01971 Z M234.666667,160.686377 C193.808416,160.686377 160.685951,193.808546 160.685951,234.748031 C160.648688,254.358867 168.422443,273.1772 182.289288,287.044045 C196.156133,300.91089 214.974466,308.684645 234.666667,308.647305 C275.524788,308.647305 308.646957,275.524917 308.646957,234.666667 C308.646957,193.808481 275.524853,160.686377 234.666667,160.686377 Z M469.333333,213.333333 L469.333333,256 L384,256 L384,213.333333 L469.333333,213.333333 Z M85.3333333,213.333333 L85.3333333,256 L3.55271368e-15,256 L3.55271368e-15,213.333333 L85.3333333,213.333333 Z M83.81722,53.6473307 L144.156999,113.987109 L113.987109,144.156999 L53.6473307,83.81722 L83.81722,53.6473307 Z M385.516113,53.6473307 L415.686003,83.81722 L355.346224,144.156999 L325.176335,113.987109 L385.516113,53.6473307 Z M256,9.68506364e-12 L256,85.3333333 L213.333333,85.3333333 L213.333333,9.6772259e-12 L256,9.68506364e-12 Z">
+                      </path>
+                    </g>
                   </g>
                 </g>
-              </g>
-            </svg>
-            <svg class="moon" width="2rem" height="2rem" viewBox="0 0 24 24" fill="none"
-              xmlns="http://www.w3.org/2000/svg">
-              <path
-                d="M19.5761 14.5765C18.7677 14.8513 17.9013 15.0003 17 15.0003C12.5817 15.0003 9 11.4186 9 7.00029C9 6.09888 9.14908 5.23229 9.42394 4.42383C6.26952 5.49607 4 8.48301 4 12C4 16.4183 7.58172 20 12 20C15.5169 20 18.5037 17.7307 19.5761 14.5765Z"
-                stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-            </svg>
-          </label>
-        </li>
-        <div class="dropdown">
-          <button onclick="toggleDropdownMenu(event)"><img class=" dropdown-icon"
-              src='./shared/icons/menu.svg' /></button>
-          <div class="dropdown-menu">
-            <ul>
-              <li>
-                <a href="#story">My Story</a>
-              </li>
-              <li>
-                <a href="#skills">Skills</a>
-              </li>
+              </svg>
+              <svg class="moon" width="2rem" height="2rem" viewBox="0 0 24 24" fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M19.5761 14.5765C18.7677 14.8513 17.9013 15.0003 17 15.0003C12.5817 15.0003 9 11.4186 9 7.00029C9 6.09888 9.14908 5.23229 9.42394 4.42383C6.26952 5.49607 4 8.48301 4 12C4 16.4183 7.58172 20 12 20C15.5169 20 18.5037 17.7307 19.5761 14.5765Z"
+                  stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+              </svg>
+            </label>
+          </li>
+          <div class="dropdown">
+            <button onclick="toggleDropdownMenu(event)"><img class=" dropdown-icon"
+                src='./shared/icons/menu.svg' /></button>
+            <div class="dropdown-menu">
+              <ul>
+                <li>
+                  <a href="#story">My Story</a>
+                </li>
+                <li>
+                  <a href="#skills">Skills</a>
+                </li>
 
-              <li>
-                <a href="#portfolio">Portfolio</a>
-              </li>
-            </ul>
+                <li>
+                  <a href="#portfolio">Portfolio</a>
+                </li>
+              </ul>
+            </div>
           </div>
-        </div>
-      </ul>
+        </ul>
 
-    </nav>
-  </header>
-  <div class="container container-fluid">
-    <div class="contact-modal">
-      <div class="contact-modal_body">
-        <div class=" d-flex flex-column ">
-          <div>
-            <button onclick="toggleModal(event)">
-              <p>Close X</p>
-            </button>
-          </div>
-          <h1>Contact Me</h1>
-          <label>Enter your name</label>
-          <input id="name" type="text" placeholder="enter your email here" />
-          <label>Enter your email adress</label>
-          <input id="email" type="text" placeholder="enter your email here" />
-        </div>
-      </div>
-    </div>
+      </nav>
+    </header>
     <div class="col-lg-12">
       <h1>Welcome </h1>
       <div class="row">
         <div class="col-lg-7 ">
           <div id="story" class="intro__text">
-            <!-- <p>My name is Jannes I am 26 years old and currently live in Purmerend. As a young boy I was always busy
-              with computers, started gaming and fixing / repairing computers a lot in my earlier years, I discovered at
-              a young age that PC and IT in general fascinate me. </p>
-            <p>After trying multiple different things throughout my life, for example: becoming a social worker, I
-              realized I had to follow my true ambitions: to become a programmer. To do this was going to be a tough
-              challenge, one does not simply become one overnight, one does through working hard and to keep learning.
-            </p>
-            <p>I signed up for the Codaisseur Full Stack Bootcamp this year to fulfil my dream, after 11 intensive weeks
-              of building awesome webbaps and completing assessments I managed to overcome obstacles and succeed along
-              side my peers. I know certain technologies you can see listed below.</p>
-            <p>Although I can call myself a developer now,there still much to learn. My mission is continuous learning,
-              I keep learning, I keep growing, a little bit better each day is still a little bit!</p> -->
-
             <p class="story_text">
               My name is Jannes and I'm a 26-year-old junior developer with big dreams of becoming a great programmer.
 
 
               I've always had a
-              natural talent for writing awesome code, and I'm constantly honing my skills through hard work and
+              natural curiosity for writing code, and I'm constantly honing my skills through hard work and
               dedication.
               <br />
               <br />
@@ -248,6 +220,20 @@
 
 
 
+    </div>
+  </div>
+  <div id="modal">
+    <div class="contact-modal_body">
+      <div class=" d-flex flex-column ">
+        <div>
+          <button onclick="toggleModal(event)">
+            <p>Close X</p>
+          </button>
+        </div>
+        <h1>Contact Me</h1>
+        <input />
+        <input />
+      </div>
     </div>
   </div>
 

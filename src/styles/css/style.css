@@ -5141,6 +5141,7 @@ body {
   scrollbar-color: var(--text-color) var(--secondary-color);
   margin: 0;
   padding: 0;
+  -webkit-transform: translateZ(0);
 }
 body::-webkit-scrollbar {
   width: 0.75rem;
@@ -5368,73 +5369,37 @@ li {
   text-decoration: underline;
 }
 
-.contact-modal {
-  display: block;
-  height: 100vh;
-  visibility: hidden;
-  background-color: grey;
-  background: grey;
-  box-shadow: 0 0 0 9999px rgba(0, 0, 0, 0.5);
-  text-align: center;
+#modal {
+  background: white;
   position: fixed;
-  overflow: auto;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  max-width: 100%;
-  max-height: 100%;
-  z-index: 5 !important;
-}
-.contact-modal_body {
-  font-size: 2rem;
-  background-color: var(--background-color);
-  justify-content: center;
-  -webkit-animation: animatetop 4s;
-  position: relative;
-  padding: 0;
-  border-radius: 2rem;
-  border: 1px solid #888;
-  width: 80%;
+  width: 50%;
   top: 50%;
   left: 50%;
-  color: var(--text-color);
-  transform: translate(-50%, -50%);
-  animation: animatetop 0.4s ease-in;
-}
-.contact-modal input {
-  align-self: center;
-  margin: 2rem 0 2rem;
-  width: 50%;
-  margin: 8px 0;
-  display: inline-block;
-  border: 1px solid #ccc;
-  box-shadow: inset 0 1px 3px #ddd;
-  border-radius: 2rem;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-  padding-left: 20px;
-  padding-right: 20px;
-  padding-top: 12px;
-  padding-bottom: 12px;
+  margin: -25% 0 0 -25%;
+  transform: scale(1.5);
+  /* prefix me */
+  opacity: 0;
+  pointer-events: none;
 }
 
-.modal-body {
-  font-size: 2rem;
-  background-color: #f7f8f8;
-  justify-content: center;
-  -webkit-animation: animatetop 0.4s;
-  position: absolute;
-  background-color: #fefefe;
-  margin: auto;
-  padding: 0;
-  border: 1px solid #888;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  animation: animatetop 0.4s ease-in;
+.dialogIsOpen #page-wrap {
+  /* Blur and de-color */
+  -webkit-filter: blur(5px) grayscale(50%);
+  /* Recede */
+  -webkit-transform: scale(0.9);
+}
+
+.dialogIsOpen #modal {
+  transform: scale(1);
+  /* prefix me */
+  opacity: 1;
+  pointer-events: auto;
+}
+
+#page-wrap,
+#modal {
+  transition: all 0.4s ease;
+  /* prefix me */
 }
 
 #contact :hover {

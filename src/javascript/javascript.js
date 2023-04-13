@@ -58,25 +58,44 @@ const getAge = birthDate => Math.floor((new Date() - new Date(birthDate).getTime
 let myAge = getAge('1996-08-29');
 
 
+// const toggleModal = (event) => {
+//     const modalElement = document.querySelector('.contact-modal');
+//     const modalBody = document.querySelector('.contact-modal_body');
+//     this.isModalVisible = !this.isModalVisible;
+//     modalBody.classList.remove("run-animation");
+//     if (this.isModalVisible) {
+//         //modalElement.style.visibility = 'visible'
+//         //document.body.style.overflow = 'hidden';
+//         document.body.classList.add("dialogIsOpen")
+
+//     }
+//     else {
+//         //modalElement.style.visibility = 'hidden';
+//         //document.body.style.overflow = 'auto';
+//         document.body.classList.remove("dialogIsOpen");
+//     }
+//     modalBody.classList.add("run-animation");
+
+//     event.preventDefault();
+// }
+
+
+
 const toggleModal = (event) => {
-    const modalElement = document.querySelector('.contact-modal');
-    const modalBody = document.querySelector('.contact-modal_body');
     this.isModalVisible = !this.isModalVisible;
-    modalBody.classList.remove("run-animation");
+    //modalBody.classList.remove("run-animation");
     if (this.isModalVisible) {
-        modalElement.style.visibility = 'visible'
-        document.body.style.overflow = 'hidden';
+
+        document.body.classList.add("dialogIsOpen")
 
     }
     else {
-        modalElement.style.visibility = 'hidden';
-        document.body.style.overflow = 'auto';
+
+        document.body.classList.remove("dialogIsOpen");
     }
-    modalBody.classList.add("run-animation");
 
     event.preventDefault();
 }
-
 
 
 const toggleDropdownMenu = (event) => {
