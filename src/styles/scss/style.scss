@@ -228,15 +228,24 @@ li {
 }
 
 #modal {
-  background: white;
-  position: fixed;
+  background: var(--background-color);
+  position: absolute;
+  left: 25%;
+  top: 10%;
+  transform: translate(-50%, -50%);
   width: 50%;
-  top: 50%;
-  left: 50%;
-  margin: -25% 0 0 -25%;
+  text-align: center;
   transform: scale(1.5); /* prefix me */
   opacity: 0;
   pointer-events: none;
+  @include flex-column;
+  gap: 2rem;
+  input {
+    width: 80%;
+    margin: 0 auto;
+    padding: 1rem;
+    margin-bottom: 1rem;
+  }
 }
 
 .dialogIsOpen #page-wrap {
