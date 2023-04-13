@@ -5141,7 +5141,6 @@ body {
   scrollbar-color: var(--text-color) var(--secondary-color);
   margin: 0;
   padding: 0;
-  -webkit-transform: translateZ(0);
 }
 body::-webkit-scrollbar {
   width: 0.75rem;
@@ -5194,7 +5193,7 @@ nav ul {
 }
 
 .link_hover:hover {
-  box-shadow: inset 100px 0 0 0 var(--text-color);
+  box-shadow: inset 10rem 0 0 0 var(--text-color);
   color: var(--background-color);
 }
 
@@ -5534,6 +5533,11 @@ textarea:focus {
   top: -0.4rem;
   box-shadow: inset 0px 5px 15px rgba(0, 0, 0, 0.4), inset 0px -5px 15px rgba(255, 255, 255, 0.4);
   cursor: pointer;
+}
+
+input {
+  font-family: "Quicksand Medium", sans-serif;
+  font-size: 1.5vh;
 }
 
 .toggle-button-label:after {
