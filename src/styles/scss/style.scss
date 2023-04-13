@@ -14,6 +14,7 @@ body {
   @include scrollbar;
   margin: 0;
   padding: 0;
+  -webkit-transform: translateZ(0);
 }
 
 a {
@@ -28,6 +29,7 @@ button {
 
 nav {
   position: fixed;
+
   left: 0;
   width: 100%;
   border-radius: 0.3rem;
@@ -56,7 +58,7 @@ nav {
 }
 
 .link_hover:hover {
-  box-shadow: inset 100px 0 0 0 var(--text-color);
+  box-shadow: inset 10rem 0 0 0 var(--text-color);
   color: var(--background-color);
 }
 
@@ -121,7 +123,7 @@ html[data-theme="dark"] {
 }
 .story {
   &_text {
-    margin: 0 auto;
+    margin: 5rem 0 0 2rem;
   }
 }
 .portfolio {
@@ -211,7 +213,7 @@ li {
 
 .dwnldbtn {
   text-align: center;
-  background-color: rgb(0, 0, 0);
+  background: rgb(0, 0, 0);
   border: none;
   color: white;
   padding: 12px 30px;
@@ -220,80 +222,78 @@ li {
 }
 
 .dwnldbtn:hover {
-  background-color: white;
+  background: white;
   color: black;
-  text-decoration: underline;
+  transition: background 0.2s ease-in;
 }
 
-.contact-modal {
-  display: block;
-  height: 100vh;
-  visibility: hidden;
-  background-color: grey;
-  background: grey;
-  box-shadow: 0 0 0 9999px rgba(0, 0, 0, 0.5);
-  text-align: center;
-  position: fixed;
-  overflow: auto;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  max-width: 100%;
-  max-height: 100%;
-  z-index: 5 !important;
-  &_body {
-    font-size: 2rem;
-    background-color: var(--background-color);
-    justify-content: center;
-    -webkit-animation: animatetop 4s;
-    position: relative;
-    padding: 0;
-    border-radius: 2rem;
-    border: 1px solid #888;
-    width: 80%;
-    top: 50%;
-    left: 50%;
-    color: var(--text-color);
-    transform: translate(-50%, -50%);
-    animation: animatetop 0.4s ease-in;
-  }
-
-  input {
-    align-self: center;
-    margin: 2rem 0 2rem;
-    width: 50%;
-    margin: 8px 0;
-    display: inline-block;
-    border: 1px solid #ccc;
-    box-shadow: inset 0 1px 3px #ddd;
-    border-radius: 2rem;
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
-    padding-left: 20px;
-    padding-right: 20px;
-    padding-top: 12px;
-    padding-bottom: 12px;
-  }
-}
-.modal-body {
-  font-size: 2rem;
-  background-color: #f7f8f8;
-  justify-content: center;
-  -webkit-animation: animatetop 0.4s;
+#modal {
+  background: var(--background-color);
   position: absolute;
-  background-color: #fefefe;
-  margin: auto;
-  padding: 0;
-  border: 1px solid #888;
-  top: 50%;
-  left: 50%;
+  left: 25%;
+  top: 10%;
   transform: translate(-50%, -50%);
-  animation: animatetop 0.4s ease-in;
-  //animation-name: animatetop;
-  //animation-duration: 0.4s
+  width: 50%;
+  text-align: center;
+  transform: scale(1.5); /* prefix me */
+  opacity: 0;
+  pointer-events: none;
+  align-items: center;
+  color: var(--text-color);
+  @include flex-column;
+  &_form {
+    @include flex-column;
+    width: 80%;
+    gap: 1rem;
+    padding: 2rem;
+  }
+  &_message {
+    height: 200px;
+    font-size: 2vh;
+    margin-bottom: 3rem;
+  }
+
+  @include flex-column;
+  gap: 2rem;
+  input {
+    font-size: 2vh;
+    background-image: linear-gradient(grey);
+    padding: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  input:focus {
+    border-color: var(--text-color);
+    box-shadow: 5px 3px 5px var(--text-color);
+    transition: box-shadow 0.4s ease-in;
+  }
+}
+textarea:hover {
+  border-color: var(--text-color);
+  box-shadow: 5px 3px 5px var(--text-color);
+  transition: box-shadow 0.4s ease-in;
+}
+textarea:focus {
+  border-color: var(--text-color);
+  box-shadow: 5px 3px 5px var(--text-color);
+  transition: box-shadow 0.4s ease-in;
+}
+
+.dialogIsOpen #page-wrap {
+  -webkit-filter: blur(5px) grayscale(50%);
+
+  -webkit-transform: scale(0.9);
+}
+
+.dialogIsOpen #modal {
+  transform: scale(1); /* prefix me */
+  opacity: 1;
+  pointer-events: auto;
+}
+
+#page-wrap,
+#modal {
+  transition: all 0.4s ease; /* prefix me */
 }
 #contact :hover {
   cursor: pointer;
@@ -301,6 +301,14 @@ li {
 
 .contact-button {
   cursor: pointer;
+}
+
+.close_button {
+  cursor: pointer;
+  color: var(--text-color);
+}
+.red {
+  color: red;
 }
 
 .li-dark-mode {
