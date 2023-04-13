@@ -29,6 +29,7 @@ button {
 
 nav {
   position: fixed;
+
   left: 0;
   width: 100%;
   border-radius: 0.3rem;
@@ -122,7 +123,7 @@ html[data-theme="dark"] {
 }
 .story {
   &_text {
-    margin: 0 auto;
+    margin: 5rem 0 0 2rem;
   }
 }
 .portfolio {
