@@ -5246,11 +5246,20 @@ html[data-theme=dark] {
     justify-content: space-between;
   }
 }
+@media (max-width: 702px) {
+  .reference-links {
+    margin: 2rem;
+  }
+}
 
 .skills-align {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+}
+
+.story_text {
+  margin: 0 auto;
 }
 
 .portfolio {

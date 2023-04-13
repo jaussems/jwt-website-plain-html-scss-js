@@ -122,6 +122,9 @@ html[data-theme="dark"] {
     gap: 4rem;
     justify-content: space-between;
   }
+  @include responsive(702px) {
+    margin: 2rem;
+  }
 }
 .skills-align {
   display: flex;
@@ -130,6 +133,7 @@ html[data-theme="dark"] {
 }
 .story {
   &_text {
+    margin: 0 auto;
   }
 }
 .portfolio {
