@@ -48,7 +48,6 @@ function addObserver(el, options) {
 
 function scrollTrigger(selector, options = {}) {
     let element = document.querySelector(selector);
-    console.log(element);
     addObserver(element, options);
 }
 
@@ -117,6 +116,5 @@ const toggleDropdownMenu = (event) => {
 
 
 // scrollTrigger('skills-inner');
-console.log(document.querySelector('.skills-inner'));
 
 scrollTrigger('.skills-inner');
