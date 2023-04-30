@@ -5429,6 +5429,25 @@ li {
   transition: background 0.2s ease-in;
 }
 
+textarea::placeholder {
+  margin-left: 2rem;
+}
+textarea::placeholder ::-webkit-input-placeholder {
+  /* WebKit browsers */
+  margin-left: 2rem;
+}
+textarea::placeholder :-moz-placeholder {
+  /* Mozilla Firefox 4 to 18 */
+  margin-left: 2rem;
+}
+textarea::placeholder ::-moz-placeholder {
+  /* Mozilla Firefox 19+ */
+  margin-left: 2rem;
+}
+textarea::placeholder :-ms-input-placeholder {
+  /* Internet Explorer 10+ */
+}
+
 #modal {
   background: var(--background-color);
   position: absolute;
@@ -5483,6 +5502,14 @@ textarea:focus {
   border-color: var(--text-color);
   box-shadow: 5px 3px 5px var(--text-color);
   transition: box-shadow 0.4s ease-in;
+}
+
+textarea::placeholder {
+  padding-left: 1rem;
+}
+
+textarea {
+  padding: 1rem;
 }
 
 .dialogIsOpen #page-wrap {
