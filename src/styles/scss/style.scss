@@ -99,6 +99,66 @@ html[data-theme="dark"] {
   }
 }
 
+.modal_message {
+  border: 2px solid transparent;
+  display: none;
+  padding: 1rem;
+}
+
+.bounce {
+  outline: 0;
+  border-color: red;
+  animation-name: bounce;
+  animation-duration: 0.5s;
+  animation-delay: 0.25s;
+}
+
+@keyframes bounce {
+  0% {
+    transform: translateX(0px);
+    timing-function: ease-in;
+  }
+  37% {
+    transform: translateX(5px);
+    timing-function: ease-out;
+  }
+  55% {
+    transform: translateX(-5px);
+    timing-function: ease-in;
+  }
+  73% {
+    transform: translateX(4px);
+    timing-function: ease-out;
+  }
+  82% {
+    transform: translateX(-4px);
+    timing-function: ease-in;
+  }
+  91% {
+    transform: translateX(2px);
+    timing-function: ease-out;
+  }
+  96% {
+    transform: translateX(-2px);
+    timing-function: ease-in;
+  }
+  100% {
+    transform: translateX(0px);
+    timing-function: ease-in;
+  }
+}
+
+.modal_message--succes {
+  display: block;
+  transform: 1s display;
+  border-color: var(--succes-color);
+}
+
+.modal_message--danger {
+  display: block;
+  border-color: var(--danger-color);
+}
+
 .skills {
   display: row;
 }
@@ -228,6 +288,10 @@ li {
   transition: background 0.2s ease-in;
 }
 
+textarea::placeholder {
+  @include placeholder(2rem);
+}
+
 #modal {
   background: var(--background-color);
   position: absolute;
@@ -280,6 +344,14 @@ textarea:focus {
   transition: box-shadow 0.4s ease-in;
 }
 
+textarea::placeholder {
+  //text-align: center;
+  padding-left: 1rem;
+}
+
+textarea {
+  padding: 1rem;
+}
 .dialogIsOpen #page-wrap {
   -webkit-filter: blur(5px) grayscale(50%);
 

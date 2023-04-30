@@ -45,3 +45,22 @@
   display: flex;
   flex-direction: row;
 }
+
+@mixin placeholder($value) {
+  ::-webkit-input-placeholder {
+    /* WebKit browsers */
+    margin-left: $value;
+  }
+  :-moz-placeholder {
+    /* Mozilla Firefox 4 to 18 */
+    margin-left: $value;
+  }
+  ::-moz-placeholder {
+    /* Mozilla Firefox 19+ */
+    margin-left: $value;
+  }
+  :-ms-input-placeholder {
+    /* Internet Explorer 10+ */
+  }
+  margin-left: $value;
+}

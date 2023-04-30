@@ -1,12 +1,10 @@
 @import "variables";
 
-    :root {
-        //--background-color: rgb(214, 7, 7);
-        --secondary-color: darkblue;
-        --text-color: #121416d8;
-        --link-color: #543fd7;
-        --transition-duration: .3s 
-
-    }
-    
-  
+:root {
+  --secondary-color: darkblue;
+  --text-color: #121416d8;
+  --link-color: #543fd7;
+  --transition-duration: 0.3s;
+  --succes-color: #4bb543;
+  --danger-color: #ff0000;
+}
