@@ -549,7 +549,14 @@ input:checked + .toggle-button-label svg.sun {
 input:checked + .toggle-button-label svg.moon {
   fill: #fff;
 }
-
+.dropdown {
+  &_mobile {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    gap: 2rem;
+  }
+}
 .dropdown-icon {
   height: 100%;
   height: 2rem;
