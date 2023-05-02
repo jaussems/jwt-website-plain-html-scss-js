@@ -5041,7 +5041,10 @@
 
   .dropdown {
     display: block;
-    margin-left: -2rem;
+    width: 100%;
+  }
+  .dropdown_darkmode {
+    margin-right: 5rem;
   }
 
   .dropdown-menu {
@@ -5325,8 +5328,13 @@ html[data-theme=dark] {
 }
 
 .story_text {
+<<<<<<< HEAD
   padding: 1rem;
   margin-top: 5rem;
+=======
+  margin-top: 5rem;
+  padding: 2rem;
+>>>>>>> 2d3eea9084df62b33070e5dd15c40e8d7cc0d5e2
 }
 
 .portfolio {
@@ -5718,6 +5726,13 @@ input:checked + .toggle-button-label svg.sun {
 
 input:checked + .toggle-button-label svg.moon {
   fill: #fff;
+}
+
+.dropdown_mobile {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  gap: 2rem;
 }
 
 .dropdown-icon {
