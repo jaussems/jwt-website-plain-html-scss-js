@@ -11,10 +11,12 @@ const darkModeToggle = () => {
     var currentTheme = document.documentElement.getAttribute("data-theme");
     var targetTheme = "light";
     document.getElementById('github-icon').src = './shared/icons/github-mark.svg';
+    document.querySelector('.dropdown-icon').src = './shared/icons/menu.svg';
 
     if (currentTheme === "light") {
         targetTheme = "dark";
         document.getElementById('github-icon').src = './shared/icons/github-mark-white.svg';
+        document.querySelector('.dropdown-icon').src = './shared/icons/menu_light.svg';
     }
     document.documentElement.setAttribute('data-theme', targetTheme)
     localStorage.setItem('theme', targetTheme);
