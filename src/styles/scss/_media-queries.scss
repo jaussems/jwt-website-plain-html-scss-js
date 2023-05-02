@@ -5,7 +5,10 @@
 
   .dropdown {
     display: block;
-    margin-left: -2rem;
+    width: 100%;
+    &_darkmode {
+      margin-right: 5rem;
+    }
   }
   .dropdown-menu {
     width: 100%;

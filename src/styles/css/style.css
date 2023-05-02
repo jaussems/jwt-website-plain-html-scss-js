@@ -5041,7 +5041,10 @@
 
   .dropdown {
     display: block;
-    margin-left: -2rem;
+    width: 100%;
+  }
+  .dropdown_darkmode {
+    margin-right: 5rem;
   }
 
   .dropdown-menu {
@@ -5325,7 +5328,8 @@ html[data-theme=dark] {
 }
 
 .story_text {
-  margin: 5rem 0 0 2rem;
+  margin-top: 5rem;
+  padding: 2rem;
 }
 
 .portfolio {
@@ -5717,6 +5721,13 @@ input:checked + .toggle-button-label svg.sun {
 
 input:checked + .toggle-button-label svg.moon {
   fill: #fff;
+}
+
+.dropdown_mobile {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  gap: 2rem;
 }
 
 .dropdown-icon {
