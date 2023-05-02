@@ -184,7 +184,8 @@ html[data-theme="dark"] {
 }
 .story {
   &_text {
-    margin: 5rem 0 0 2rem;
+    padding: 1rem;
+    margin-top: 5rem;
   }
 }
 .portfolio {
@@ -557,6 +558,19 @@ input:checked + .toggle-button-label svg.moon {
   cursor: pointer;
 }
 
+.dropdown span {
+  display: block;
+  width: 33px;
+  height: 4px;
+  margin-bottom: 5px;
+  position: relative;
+
+  background: #cdcdcd;
+  border-radius: 3px;
+
+  z-index: 1;
+}
+
 .dropdown-menu {
   position: absolute;
   top: calc(100% + 0.25rem);
@@ -566,16 +580,4 @@ input:checked + .toggle-button-label svg.moon {
   box-shadow: 0 2px 15px 0 rgba(0, 0, 0, 0.1);
   opacity: 0;
   transition: opacity 0.2s ease-in;
-
-  // ul {
-  //   padding: 0;
-  // }
-  // ul > li {
-  //   background: linear-gradient(#1a64b9 0 0) var(--p, 0) / var(--p, 0) no-repeat;
-  //   transition: 0.4s, background-position 0s;
-  // }
-  // ul > li:hover {
-  //   --p: 100%;
-  //   color: #fff;
-  // }
 }

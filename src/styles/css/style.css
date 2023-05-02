@@ -5325,7 +5325,8 @@ html[data-theme=dark] {
 }
 
 .story_text {
-  margin: 5rem 0 0 2rem;
+  padding: 1rem;
+  margin-top: 5rem;
 }
 
 .portfolio {
@@ -5725,6 +5726,17 @@ input:checked + .toggle-button-label svg.moon {
   width: 2rem;
   justify-content: center;
   cursor: pointer;
+}
+
+.dropdown span {
+  display: block;
+  width: 33px;
+  height: 4px;
+  margin-bottom: 5px;
+  position: relative;
+  background: #cdcdcd;
+  border-radius: 3px;
+  z-index: 1;
 }
 
 .dropdown-menu {
