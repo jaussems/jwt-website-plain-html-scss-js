@@ -6,7 +6,12 @@ let storedTheme = localStorage.getItem('theme') || (window.matchMedia("(prefers-
 
 
 document.querySelector('.modal-btn').addEventListener('click', (event) => {
-    toggleModal(event)
+    toggleModal(event);
+});
+
+
+document.querySelector('.dropdown-icon').addEventListener('click', (event) => {
+    toggleDropdownMenu(event);
 });
 
 
