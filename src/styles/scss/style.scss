@@ -341,6 +341,14 @@ textarea:focus {
   transition: box-shadow 0.4s ease-in;
 }
 
+.submit-btn {
+  @include button-style;
+}
+
+.submit-btn:hover {
+  @include button-style-hover;
+}
+
 textarea::placeholder {
   //text-align: center;
   padding-left: 1rem;
