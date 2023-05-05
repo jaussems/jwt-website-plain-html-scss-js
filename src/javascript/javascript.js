@@ -4,15 +4,31 @@ let isModalVisible = false;
 let toggleDropDown = false;
 let storedTheme = localStorage.getItem('theme') || (window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
 
+document.querySelector('.contact-button').addEventListener('click', (event) => {
+    toggleModal(event);
+});
+
+document.querySelector('.modal-btn').addEventListener('click', (event) => {
+    toggleModal(event);
+});
+
+
+document.querySelector('.dropdown-icon').addEventListener('click', (event) => {
+    toggleDropdownMenu(event);
+});
+
+
+
 if (storedTheme) {
     document.documentElement.setAttribute('data-theme', storedTheme)
     if (storedTheme === 'light') {
         document.getElementById('github-icon').src = './shared/icons/github-mark.svg';
         document.querySelector('.dropdown-icon').src = './shared/icons/menu.svg';
     }
-    if (storedTheme === 'dark')
+    if (storedTheme === 'dark') {
         document.getElementById('github-icon').src = './shared/icons/github-mark-white.svg';
-    document.querySelector('.dropdown-icon').src = './shared/icons/menu_light.svg';
+        document.querySelector('.dropdown-icon').src = './shared/icons/menu_light.svg';
+    }
 }
 
 const darkModeToggle = () => {

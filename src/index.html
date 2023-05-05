@@ -32,7 +32,7 @@
           <li>
 
 
-            <a class="link_hover contact-button" onclick="toggleModal(event)">Contact</a>
+            <a class="link_hover contact-button">Contact</a>
 
 
           </li>
@@ -64,11 +64,8 @@
           </li>
           <div class="dropdown">
             <div class="dropdown_mobile">
-
-
-              <button onclick="toggleDropdownMenu(event)">
-                <img class=" dropdown-icon" src='./shared/icons/menu.svg' />
-
+              <button>
+                <img class="dropdown-icon" src='./shared/icons/menu.svg' />
               </button>
               <div class="dropdown_darkmode">
                 <input type="checkbox" id="darkmode-toggle" class="hide-input " onchange="darkModeToggle()" />
@@ -258,7 +255,7 @@
 
 
 
-    <button onclick="toggleModal(event)">
+    <button class="modal-btn">
       <p class="close_button">Close <span class="red"> X </span></p>
     </button>
 
@@ -269,7 +266,7 @@
       <input type="text" name="subject" placeholder="email" />
       <label>Enter your message</label>
       <textarea id="modal_message" name="text" placeholder="enter your message"></textarea>
-      <button class="dwnldbtn" id="js_send" onclick="sendForm(event)">Submit</button>
+      <button class="submit-btn" id="js_send">Submit</button>
 
 
     </form>

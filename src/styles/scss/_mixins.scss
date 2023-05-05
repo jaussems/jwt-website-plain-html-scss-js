@@ -64,3 +64,19 @@
   }
   margin-left: $value;
 }
+
+@mixin button-style {
+  text-align: center;
+  background: var(--text-color);
+  border: none;
+  color: var(--background-color);
+  padding: 12px 30px;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+@mixin button-style-hover {
+  background: var(--background-color);
+  color: var(--text-color);
+  transition: background 0.2s ease-in;
+}

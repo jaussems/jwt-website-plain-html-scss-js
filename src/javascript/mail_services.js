@@ -8,6 +8,7 @@ const data_js = {
 const sendButton = document.getElementById("js_send");
 
 sendButton.addEventListener("click", function (e) {
+    sendForm(e);
     e.preventDefault();
 });
 
