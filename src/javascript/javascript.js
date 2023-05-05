@@ -4,6 +4,11 @@ let isModalVisible = false;
 let toggleDropDown = false;
 let storedTheme = localStorage.getItem('theme') || (window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
 
+
+document.querySelector('.modal-btn').addEventListener('click', (event) => {
+    toggleModal(event)
+});
+
 if (storedTheme) {
     document.documentElement.setAttribute('data-theme', storedTheme)
     if (storedTheme === 'light') {
