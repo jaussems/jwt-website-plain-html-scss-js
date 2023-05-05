@@ -82,6 +82,10 @@ html[data-theme="dark"] {
   width: 2.5rem;
 }
 
+.submit-btn {
+  @include button-style;
+}
+
 .intro {
   justify-content: center;
   background-color: var(--secondary-color);
@@ -274,19 +278,11 @@ li {
 }
 
 .dwnldbtn {
-  text-align: center;
-  background: rgb(0, 0, 0);
-  border: none;
-  color: white;
-  padding: 12px 30px;
-  cursor: pointer;
-  font-size: 20px;
+  @include button-style;
 }
 
 .dwnldbtn:hover {
-  background: white;
-  color: black;
-  transition: background 0.2s ease-in;
+  @include button-style-hover;
 }
 
 textarea::placeholder {

@@ -5221,6 +5221,16 @@ html[data-theme=dark] {
   width: 2.5rem;
 }
 
+.submit-btn {
+  text-align: center;
+  background: var(--text-color);
+  border: none;
+  color: var(--background-color);
+  padding: 12px 30px;
+  cursor: pointer;
+  font-size: 20px;
+}
+
 .intro {
   justify-content: center;
   background-color: var(--secondary-color);
@@ -5419,17 +5429,17 @@ li {
 
 .dwnldbtn {
   text-align: center;
-  background: black;
+  background: var(--text-color);
   border: none;
-  color: white;
+  color: var(--background-color);
   padding: 12px 30px;
   cursor: pointer;
   font-size: 20px;
 }
 
 .dwnldbtn:hover {
-  background: white;
-  color: black;
+  background: var(--background-color);
+  color: var(--text-color);
   transition: background 0.2s ease-in;
 }
 
