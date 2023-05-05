@@ -22,14 +22,13 @@ document.querySelector('.dropdown-icon').addEventListener('click', (event) => {
 if (storedTheme) {
     document.documentElement.setAttribute('data-theme', storedTheme)
     if (storedTheme === 'light') {
-
         document.getElementById('github-icon').src = './shared/icons/github-mark.svg';
-        // console.log('test');
         document.querySelector('.dropdown-icon').src = './shared/icons/menu.svg';
     }
-    if (storedTheme === 'dark')
+    if (storedTheme === 'dark') {
         document.getElementById('github-icon').src = './shared/icons/github-mark-white.svg';
-    document.querySelector('.dropdown-icon').src = './shared/icons/menu_light.svg';
+        document.querySelector('.dropdown-icon').src = './shared/icons/menu_light.svg';
+    }
 }
 
 const darkModeToggle = () => {
