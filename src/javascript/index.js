@@ -1,7 +1,10 @@
+
+
 let isDark = false;
 let isModalVisible = false;
 let toggleDropDown = false;
 let storedTheme = localStorage.getItem('theme') || (window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
+
 
 document.querySelector('.contact-button').addEventListener('click', (event) => {
     toggleModal(event);
@@ -15,6 +18,12 @@ document.querySelector('.modal-btn').addEventListener('click', (event) => {
 document.querySelector('.dropdown-icon').addEventListener('click', (event) => {
     toggleDropdownMenu(event);
 });
+const img = document.createElement("img");
+img.src = "./shared/images/jannes.jpeg";
+
+const storyImage = document.querySelector('.intro__image');
+storyImage.appendChild(img);
+img.classList.add("intro__image");
 
 
 

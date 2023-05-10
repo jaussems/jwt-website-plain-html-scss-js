@@ -24,9 +24,9 @@ module.exports = {
                 ]
             },
             {
-                test: /\.(jpg|jpeg|gif|png)$/,
-                exclude: /node_modules/,
-                use: 'url-loader?limit=1024&name=images/[name].[ext]'
+                test: /\.(png|jpe?g|gif)$/i,
+                loader: 'file-loader',
+                use: 'file-loader?limit=1024&name=shared/fonts/[name].[ext]'
             },
             {
                 test: /\.(woff|woff2|eot|ttf|svg)$/,
