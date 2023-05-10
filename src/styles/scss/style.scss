@@ -560,6 +560,9 @@ input:checked + .toggle-button-label svg.moon {
     width: 100%;
     gap: 2rem;
   }
+  @include responsive(520px) {
+    display: none;
+  }
 }
 .dropdown-icon {
   height: 100%;
