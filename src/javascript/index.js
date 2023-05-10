@@ -1,6 +1,3 @@
-//import "../styles/scss/style.scss";
-
-
 let isDark = false;
 let isModalVisible = false;
 let toggleDropDown = false;
