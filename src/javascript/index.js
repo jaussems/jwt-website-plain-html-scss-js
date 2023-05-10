@@ -1,4 +1,4 @@
-import "../styles/scss/style.scss";
+//import "../styles/scss/style.scss";
 
 
 let isDark = false;
