@@ -13,7 +13,10 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "node-sass": "^7.0.3"
+    "css-loader": "^6.7.3",
+    "node-sass": "^7.0.3",
+    "sass-loader": "^13.2.2",
+    "style-loader": "^3.3.2"
   },
   "devDependencies": {
     "webpack": "^5.82.0",
