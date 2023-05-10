@@ -5107,11 +5107,6 @@
     width: 100%;
   }
 }
-@media (width >= 520px) {
-  .dropdown {
-    display: none;
-  }
-}
 @media (min-width: 520px) and (max-width: 767px) {
   .skills li {
     display: flex;
@@ -5749,6 +5744,14 @@ input:checked + .toggle-button-label svg.moon {
   fill: #fff;
 }
 
+.dropdown {
+  display: none;
+}
+@media (max-width: 520px) {
+  .dropdown {
+    display: block;
+  }
+}
 .dropdown_mobile {
   display: flex;
   justify-content: space-between;
