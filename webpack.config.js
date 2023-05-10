@@ -24,9 +24,15 @@ module.exports = {
                 ]
             },
             {
-                test: /\.(?:ico|gif|png|jpg|jpeg)$/i,
-                type: 'asset',
+                test: /\.(jpg|jpeg|gif|png)$/,
+                exclude: /node_modules/,
+                use: 'url-loader?limit=1024&name=images/[name].[ext]'
             },
+            {
+                test: /\.(woff|woff2|eot|ttf|svg)$/,
+                exclude: /node_modules/,
+                use: 'url-loader?limit=1024&name=shared/fonts/[name].[ext]'
+            }
         ]
     },
     optimization: {
