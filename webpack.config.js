@@ -8,12 +8,31 @@ module.exports = {
     output: {
         filename: "app.js",
         path: path.resolve(__dirname, "dist"),
+        assetModuleFilename: 'images/[hash][ext][query]',
+
     },
     plugins: [new HtmlWebpackPlugin({
         template: "./src/index.html"
-    }), new MiniCssExtractPlugin()],
+    }), new MiniCssExtractPlugin({
+        filename: "[name].css"
+    })],
     module: {
         rules: [
+            {
+                test: /\.html$/i,
+                loader: "html-loader",
+                generator: {
+                    filename: 'static/[name][ext]',
+                },
+                options: {
+                    localIdentName: '[local]'
+                }
+                // generator: {
+                //     filename: 'static/[hash][ext]',
+                //     publicPath: '/shared/icons',
+                // },
+            },
+
             {
                 test: /\.(sass|scss)$/,
                 sideEffects: true,
@@ -23,15 +42,22 @@ module.exports = {
                     "sass-loader"
                 ]
             },
+            // {
+            //     test: /\.(png|svg|jpg|jpeg|gif)$/i,
+            //     type: 'asset/resource',
+            // },
+            // {
+            //     test: /\.(png|jpe?g|gif|svg)$/i,
+            //     dependency: { not: ['url'] },
+            //     type: "asset/resource",
+
+            // },
             {
-                test: /\.(png|jpe?g|gif)$/i,
-                loader: 'file-loader',
-                use: 'file-loader?limit=1024&name=shared/fonts/[name].[ext]'
-            },
-            {
-                test: /\.(woff|woff2|eot|ttf|svg)$/,
-                exclude: /node_modules/,
-                use: 'url-loader?limit=1024&name=shared/fonts/[name].[ext]'
+                test: /\.(woff|woff2|eot|ttf)$/,
+                type: "asset/inline",
+                // generator: {
+                //     out
+                // }
             }
         ]
     },

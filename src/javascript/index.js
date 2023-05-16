@@ -18,12 +18,7 @@ document.querySelector('.modal-btn').addEventListener('click', (event) => {
 document.querySelector('.dropdown-icon').addEventListener('click', (event) => {
     toggleDropdownMenu(event);
 });
-const img = document.createElement("img");
-img.src = "./shared/images/jannes.jpeg";
 
-const storyImage = document.querySelector('.intro__image');
-storyImage.appendChild(img);
-img.classList.add("intro__image");
 
 
 
