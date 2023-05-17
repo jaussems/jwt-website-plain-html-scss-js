@@ -14,15 +14,13 @@ module.exports = {
                 .split("/")
                 .slice(1)
                 .join("/");
-            return `${filepath}/[name].[ext][query]`;
+            return `${filepath}/[name][ext]`;
         },
 
     },
     plugins: [new HtmlWebpackPlugin({
         template: "./src/index.html"
-    }), new MiniCssExtractPlugin({
-        filename: "[name].css"
-    })],
+    }), new MiniCssExtractPlugin()],
     module: {
         rules: [
             {
@@ -44,7 +42,8 @@ module.exports = {
                 use: [
                     MiniCssExtractPlugin.loader,
                     "css-loader",
-                    "sass-loader"
+                    "sass-loader",
+
                 ]
             },
             // {
@@ -70,7 +69,7 @@ module.exports = {
         minimize: true,
         minimizer: [
             new CssMinimizerPlugin()
-        ]
+        ],
     }
 
 
