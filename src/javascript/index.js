@@ -25,25 +25,35 @@ document.querySelector('.dropdown-icon').addEventListener('click', (event) => {
 if (storedTheme) {
     document.documentElement.setAttribute('data-theme', storedTheme)
     if (storedTheme === 'light') {
-        document.getElementById('github-icon').src = './shared/icons/github-mark.svg';
-        document.querySelector('.dropdown-icon').src = './shared/icons/menu.svg';
+        //document.getElementById('github-icon').src = './shared/icons/github-mark.svg';
+        //document.querySelector('.dropdown-icon').src = './shared/icons/menu.svg';
+        document.getElementById('github-icon').classList.remove('.image-white');
+        document.querySelector('.dropdown-icon').classList.remove('.image-white');
+
+
     }
     if (storedTheme === 'dark') {
-        document.getElementById('github-icon').src = './shared/icons/github-mark-white.svg';
-        document.querySelector('.dropdown-icon').src = './shared/icons/menu_light.svg';
+        //document.getElementById('github-icon').src = './shared/icons/github-mark-white.svg';
+        //document.getElementById('github-icon').src = './shared/icons/github-mark-white.svg';
+        document.getElementById('github-icon').classList.add('image-white');
+        document.querySelector('.dropdown-icon').classList.add('image-white');
     }
 }
 
 const darkModeToggle = () => {
     var currentTheme = document.documentElement.getAttribute("data-theme");
     var targetTheme = "light";
-    document.getElementById('github-icon').src = './shared/icons/github-mark.svg';
-    document.querySelector('.dropdown-icon').src = './shared/icons/menu.svg';
+    // document.getElementById('github-icon').src = './shared/icons/github-mark.svg';
+    // document.querySelector('.dropdown-icon').src = './shared/icons/menu.svg';
+
+    document.getElementById('github-icon').classList.remove('image-white');
+    document.querySelector('.dropdown-icon').classList.remove('image-white');
 
     if (currentTheme === "light") {
         targetTheme = "dark";
-        document.getElementById('github-icon').src = './shared/icons/github-mark-white.svg';
-        document.querySelector('.dropdown-icon').src = './shared/icons/menu_light.svg';
+        document.getElementById('github-icon').classList.add('image-white');
+        document.querySelector('.dropdown-icon').classList.add('image-white');
+
     }
     document.documentElement.setAttribute('data-theme', targetTheme)
     localStorage.setItem('theme', targetTheme);

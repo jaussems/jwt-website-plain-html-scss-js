@@ -5789,4 +5789,8 @@ input:checked + .toggle-button-label svg.moon {
   transition: opacity 0.2s ease-in;
 }
 
+.image-white {
+  filter: brightness(0) invert(1);
+}
+
 /*# sourceMappingURL=style.css.map */
