@@ -8,7 +8,14 @@ module.exports = {
     output: {
         filename: "app.js",
         path: path.resolve(__dirname, "dist"),
-        assetModuleFilename: 'images/[hash][ext][query]',
+        assetModuleFilename: (pathData) => {
+            const filepath = path
+                .dirname(pathData.filename)
+                .split("/")
+                .slice(1)
+                .join("/");
+            return `${filepath}/[name].[ext][query]`;
+        },
 
     },
     plugins: [new HtmlWebpackPlugin({
@@ -24,9 +31,7 @@ module.exports = {
                 generator: {
                     filename: 'static/[name][ext]',
                 },
-                options: {
-                    localIdentName: '[local]'
-                }
+
                 // generator: {
                 //     filename: 'static/[hash][ext]',
                 //     publicPath: '/shared/icons',
