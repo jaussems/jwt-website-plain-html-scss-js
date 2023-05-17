@@ -359,7 +359,6 @@ textarea {
 }
 .dialogIsOpen #page-wrap {
   -webkit-filter: blur(5px) grayscale(50%);
-
   -webkit-transform: scale(0.9);
 }
 
@@ -554,8 +553,14 @@ input:checked + .toggle-button-label svg.moon {
   fill: #fff;
 }
 .dropdown {
+  @include responsive(520px) {
+    display: block;
+  }
+  display: none;
+
   &_mobile {
     display: flex;
+
     justify-content: space-between;
     width: 100%;
     gap: 2rem;
@@ -591,4 +596,8 @@ input:checked + .toggle-button-label svg.moon {
   box-shadow: 0 2px 15px 0 rgba(0, 0, 0, 0.1);
   opacity: 0;
   transition: opacity 0.2s ease-in;
+}
+
+.image-white {
+  filter: brightness(0) invert(1);
 }
