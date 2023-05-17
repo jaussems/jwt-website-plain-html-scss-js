@@ -29,11 +29,6 @@ module.exports = {
                 generator: {
                     filename: 'static/[name][ext]',
                 },
-
-                // generator: {
-                //     filename: 'static/[hash][ext]',
-                //     publicPath: '/shared/icons',
-                // },
             },
 
             {
@@ -43,25 +38,11 @@ module.exports = {
                     MiniCssExtractPlugin.loader,
                     "css-loader",
                     "sass-loader",
-
                 ]
             },
-            // {
-            //     test: /\.(png|svg|jpg|jpeg|gif)$/i,
-            //     type: 'asset/resource',
-            // },
-            // {
-            //     test: /\.(png|jpe?g|gif|svg)$/i,
-            //     dependency: { not: ['url'] },
-            //     type: "asset/resource",
-
-            // },
             {
                 test: /\.(woff|woff2|eot|ttf)$/,
                 type: "asset/inline",
-                // generator: {
-                //     out
-                // }
             }
         ]
     },
